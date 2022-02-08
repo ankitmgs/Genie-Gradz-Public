@@ -467,7 +467,7 @@ const SideBar = () => {
                             eventKey="0"
                             style={{ backgroundColor: "white" }}
                           >
-                            <Accordion.Header>
+                            <Accordion.Header style={{backgroundColor: "white"}}>
                               <i className="mdi mdi-email-outline" style={{marginRight: "1rem"}}/>
                               Email
                             </Accordion.Header>
