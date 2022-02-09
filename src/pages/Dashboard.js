@@ -1,12 +1,14 @@
-import React from 'react';
-import SideBar from '../components/SideBar';
-import '../assets/css/app.css'
-import '../assets/css/appDark.css'
+import React from "react";
+import Main from "../components/Main";
+import "../assets/css/app.css";
+import "../assets/css/appDark.css";
 
 const Dashboard = () => {
-  return <div>
-      <SideBar />
-  </div>;
+  return (
+    <div>
+      <Main />
+    </div>
+  );
 };
 
 export default Dashboard;
