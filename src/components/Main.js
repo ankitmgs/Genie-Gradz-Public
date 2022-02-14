@@ -32,7 +32,6 @@ const SideBar = () => {
       </div>
       <div className="left-side-menu">
         <SideBarMenu />
-       
       </div>
       {/* main content */}
       <div className="content-page">
@@ -40,17 +39,37 @@ const SideBar = () => {
           <div className="container-fluid">
             <div className="row">
               <div className="col-xl-3 col-md-6">
-                <RevenueStats name="Total Revenue" number="2231" />
+                <RevenueStats
+                  name="Total Revenue"
+                  number="2231"
+                  icon="envelope"
+                  iconColor="#3AA76D"
+                />
               </div>
               <div className="col-xl-3 col-md-6">
-                <AnalyticsSales name="Sales Analytics" number="8451" />
+                <AnalyticsSales
+                  name="Sales Analytics"
+                  number="8451"
+                  icon="wallet"
+                  iconColor=" #FF0080"
+                />
               </div>
               <div className="col-xl-3 col-md-6">
-                <RevenueStats name="Statistics" number="231" />
+                <RevenueStats
+                  name="Statistics"
+                  number="231"
+                  icon="cart-shopping"
+                  iconColor="#0070F3"
+                />
               </div>
 
               <div className="col-xl-3 col-md-6">
-                <AnalyticsSales name="Daily Sales" number="158" />
+                <AnalyticsSales
+                  name="Daily Sales"
+                  number="158"
+                  icon="envelope"
+                  iconColor="rgba(121, 40, 202, 0.85)"
+                />
               </div>
             </div>
             {/* mid part of website */}

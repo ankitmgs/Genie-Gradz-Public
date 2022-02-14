@@ -7,7 +7,7 @@ import user5 from "../assets/images/users/user-5.jpg";
 const Inbox = () => {
   return (
     <div>
-      <div className="card">
+      <div className="card  my-0">
         <div className="card-body">
           <div className="dropdown float-end">
             <a

@@ -36,15 +36,20 @@ const AnalyticsSales = (props) => {
           <h4 className="header-title mt-0 mb-3">{props.name}</h4>
 
           <div className="widget-box-2">
-            <div className="widget-detail-2 text-end">
-              <span className="badge bg-success rounded-pill float-start mt-3">
-                32% <i className="mdi mdi-trending-up"></i>{" "}
+            <div className="widget-chart-box-1 float-start mx-3" dir="ltr">
+              <span style={{ color: props.iconColor }}>
+                <i className={`fa-3x fa-solid fa-${props.icon}`}></i>
               </span>
-              <h2 className="fw-normal mb-1"> {props.number} </h2>
-              <p className="text-muted mb-3">Revenue today</p>
+              {/* <span style={{ color: "l`ightgreen" }}>
+                <i class="fa-4x fa-solid fa-money-check-dollar"></i>
+              </span> */}
             </div>
-            <div className="progress progress-bar-alt-success progress-sm">
-              <div
+
+            <h2 className="fw-normal mb-1"> {props.number} </h2>
+            <p className="text-muted mb-3">Revenue today</p>
+          </div>
+          {/* <div className="progress progress-bar-alt-success progress-sm"> */}
+          {/* <div
                 className="progress-bar bg-success"
                 role="progressbar"
                 aria-valuenow="77"
@@ -52,13 +57,13 @@ const AnalyticsSales = (props) => {
                 aria-valuemax="100"
                 style={{ width: "77%" }}
               >
-                <span className="visually-hidden">77% Complete</span>
-              </div>
-            </div>
-          </div>
+                <span className="visually-hidden">77% Complete</span> */}
         </div>
       </div>
     </div>
+    // </div>
+    // </div>
+    // </div>
   );
 };
 
