@@ -1,11 +1,13 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import './App.css';
-import Dashboard from './pages/Dashboard';
-import './assets/css/bootstrapDark.css'
-import './assets/css/appDark.css'
-import './assets/css/bootstrap.css'
-import './assets/css/app.css'
-import './assets/css/icon.css'
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./App.css";
+import Dashboard from "./pages/Dashboard";
+import "./assets/css/bootstrapDark.css";
+import "./assets/css/appDark.css";
+import "./assets/css/bootstrap.css";
+import "./assets/css/app.css";
+import "./assets/css/icon.css";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route element={<Dashboard />} path="/" />
+          <Route element={<Login />} path="/login" />
+          <Route element={<Register />} path="/register" />
         </Routes>
       </BrowserRouter>
     </div>

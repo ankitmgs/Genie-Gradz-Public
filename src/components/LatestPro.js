@@ -3,7 +3,7 @@ import React from "react";
 const LatestPro = () => {
   return (
     <div>
-      <div className="card">
+      <div className="card my-0">
         <div className="card-body">
           <div className="dropdown float-end">
             <a
