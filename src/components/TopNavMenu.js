@@ -85,6 +85,11 @@ const TopNavMenu = () => {
           </form>
         </li>
 
+        <li>
+          <Link to="#">Profile</Link>
+        </li>
+        
+
         <li className="dropdown d-inline-block d-lg-none">
           <a
             className="nav-link dropdown-toggle arrow-none waves-effect waves-light"
@@ -107,6 +112,7 @@ const TopNavMenu = () => {
             </form>
           </div>
         </li>
+        
 
         <li className="dropdown notification-list topbar-dropdown">
           <a
