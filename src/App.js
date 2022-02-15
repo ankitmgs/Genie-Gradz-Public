@@ -8,7 +8,7 @@ import "./assets/css/app.css";
 import "./assets/css/icon.css";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import userProfile from "./components/userProfile";
+import UserProfile from "./components/userProfile";
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
           <Route element={<Dashboard />} path="/" />
           <Route element={<Login />} path="/login" />
           <Route element={<Register />} path="/register" />
-          <Route element={<userProfile />} path="/profile" />
+          <Route element={<UserProfile />} path="/profile" />
         </Routes>
       </BrowserRouter>
     </div>
