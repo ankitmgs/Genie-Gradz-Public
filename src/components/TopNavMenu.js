@@ -1,119 +1,26 @@
 import React from "react";
 import user from "../assets/images/users/user-1.jpg";
-import user2 from "../assets/images/users/user-2.jpg";
-import user3 from "../assets/images/users/user-3.jpg";
+
 import user4 from "../assets/images/users/user-4.jpg";
-import user5 from "../assets/images/users/user-5.jpg";
-import user10 from "../assets/images/users/user-10.jpg";
+
 import { Link } from "react-router-dom";
 const TopNavMenu = () => {
   return (
     <div>
-      {" "}
+      {/*  */}
       <ul className="list-unstyled topnav-menu float-end mb-0">
         <li className="d-none d-lg-block">
           <form className="app-search">
             <div className="app-search-box">
-              <div className="input-group">
-                <input
-                  type="text"
-                  className="form-control"
-                  placeholder="Search..."
-                  id="top-search"
-                />
-                <button className="btn input-group-text" type="submit">
-                  <i className="fe-search"></i>
-                </button>
-              </div>
-              <div className="dropdown-menu dropdown-lg" id="search-dropdown">
-                <div className="dropdown-header noti-title">
-                  <h5 className="text-overflow mb-2">Found 22 results</h5>
-                </div>
-
-                <a href="#" className="dropdown-item notify-item">
-                  <i className="fe-home me-1"></i>
-                  <span>Analytics Report</span>
-                </a>
-
-                <a href="#" className="dropdown-item notify-item">
-                  <i className="fe-aperture me-1"></i>
-                  <span>How can I help you?</span>
-                </a>
-
-                <a href="#" className="dropdown-item notify-item">
-                  <i className="fe-settings me-1"></i>
-                  <span>User profile settings</span>
-                </a>
-
-                <div className="dropdown-header noti-title">
-                  <h6 className="text-overflow mb-2 text-uppercase">Users</h6>
-                </div>
-
-                <div className="notification-list">
-                  <a href="#" className="dropdown-item notify-item">
-                    <div className="d-flex align-items-start">
-                      <img
-                        className="d-flex me-2 rounded-circle"
-                        src={user2}
-                        alt="Generic placeholder image"
-                        height="32"
-                      />
-                      <div className="w-100">
-                        <h5 className="m-0 font-14">Erwin E. Brown</h5>
-                        <span className="font-12 mb-0">UI Designer</span>
-                      </div>
-                    </div>
-                  </a>
-
-                  <a href="#" className="dropdown-item notify-item">
-                    <div className="d-flex align-items-start">
-                      <img
-                        className="d-flex me-2 rounded-circle"
-                        src={user5}
-                        alt="Generic placeholder image"
-                        height="32"
-                      />
-                      <div className="w-100">
-                        <h5 className="m-0 font-14">Jacob Deo</h5>
-                        <span className="font-12 mb-0">Developer</span>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
+              <div className="input-group"></div>
             </div>
           </form>
         </li>
-
-        <li>
-          <Link to="#">Profile</Link>
+        <li className="align-self-center my-2">
+          <Link className="btn btn-outline-warning" to="/Login ">
+            Login
+          </Link>
         </li>
-        
-
-        <li className="dropdown d-inline-block d-lg-none">
-          <a
-            className="nav-link dropdown-toggle arrow-none waves-effect waves-light"
-            data-bs-toggle="dropdown"
-            href="#"
-            role="button"
-            aria-haspopup="false"
-            aria-expanded="false"
-          >
-            <i className="fe-search noti-icon"></i>
-          </a>
-          <div className="dropdown-menu dropdown-lg dropdown-menu-end p-0">
-            <form className="p-3">
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Search ..."
-                aria-label="Recipient's username"
-              />
-            </form>
-          </div>
-        </li>
-        
-
         <li className="dropdown notification-list topbar-dropdown">
           <a
             className="nav-link dropdown-toggle waves-effect waves-light"
@@ -140,7 +47,7 @@ const TopNavMenu = () => {
               </h5>
             </div>
 
-            <div className="noti-scroll" data-simplebar="init">
+            {/* <div className="noti-scroll" data-simplebar="init">
               <div className="simplebar-wrapper" style={{ margin: "0px" }}>
                 <div className="simplebar-height-auto-observer-wrapper">
                   <div className="simplebar-height-auto-observer"></div>
@@ -263,7 +170,7 @@ const TopNavMenu = () => {
                   style={{ height: "0px", display: "none" }}
                 ></div>
               </div>
-            </div>
+            </div> */}
 
             <a
               href="#"
@@ -279,17 +186,17 @@ const TopNavMenu = () => {
           <Link
             className="nav-link dropdown-toggle nav-user me-0 waves-effect waves-light"
             data-bs-toggle="dropdown"
-            to="/Login"
+            to="/profile"
             role="button"
             aria-haspopup="false"
             aria-expanded="false"
           >
             <img src={user} alt="user-image" className="rounded-circle" />
             <span className="pro-user-name ms-1">
-              Nowak <i className="mdi mdi-chevron-down"></i>
+              Your Profile <i className="mdi mdi-chevron-down"></i>
             </span>
           </Link>
-          <div className="dropdown-menu dropdown-menu-end profile-dropdown ">
+          {/* <div className="dropdown-menu dropdown-menu-end profile-dropdown ">
             <div className="dropdown-header noti-title">
               <h6 className="text-overflow m-0">Welcome !</h6>
             </div>
@@ -316,16 +223,30 @@ const TopNavMenu = () => {
               <i className="fe-log-out"></i>
               <span>Logout</span>
             </a>
-          </div>
+          </div> */}
         </li>
 
-        <li className="dropdown notification-list">
+        <li className="dropdown d-inline-block d-lg-none">
           <a
+            className="nav-link dropdown-toggle arrow-none waves-effect waves-light"
+            data-bs-toggle="dropdown"
             href="#"
-            className="nav-link right-bar-toggle waves-effect waves-light"
+            role="button"
+            aria-haspopup="false"
+            aria-expanded="false"
           >
-            <i className="fe-settings noti-icon"></i>
+            <i className="fe-search noti-icon"></i>
           </a>
+          <div className="dropdown-menu dropdown-lg dropdown-menu-end p-0">
+            <form className="p-3">
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Search ..."
+                aria-label="Recipient's username"
+              />
+            </form>
+          </div>
         </li>
       </ul>
     </div>

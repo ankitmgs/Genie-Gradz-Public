@@ -4,7 +4,7 @@ import user2 from "../assets/images/users/user-2.jpg";
 import user3 from "../assets/images/users/user-3.jpg";
 import user4 from "../assets/images/users/user-4.jpg";
 import user5 from "../assets/images/users/user-5.jpg";
-const Inbox = () => {
+const RoyalCollection = () => {
   return (
     <div>
       <div className="card  my-0">
@@ -37,7 +37,7 @@ const Inbox = () => {
             </div>
           </div>
 
-          <h4 className="header-title mb-3">Inbox</h4>
+          <h4 className="header-title mb-3">RoyalCollection</h4>
 
           <div className="inbox-widget">
             <div className="inbox-item">
@@ -103,4 +103,4 @@ const Inbox = () => {
   );
 };
 
-export default Inbox;
+export default RoyalCollection;

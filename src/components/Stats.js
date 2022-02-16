@@ -3,7 +3,6 @@ import ReactApexChart from "react-apexcharts";
 const statobj = {
   series: [
     {
-      // data: [21, 22, 10, 28, 16, 21, 13, 30],
       data: [5, 2, 10, 8, 7, 2, 3, 9],
     },
   ],

@@ -8,14 +8,13 @@ import user4 from "../assets/images/users/user-4.jpg";
 // import user5 from "../assets/images/users/user-5.jpg";
 // import user10 from "../assets/images/users/user-10.jpg";
 // import { Accordion } from "react-bootstrap";
-import RevenueStats from "./RevenueStats";
-import AnalyticsSales from "./AnalyticsSales";
-import DailySale from "./DailySale";
+import Card from "./Card";
+import Attendence from "./Attendence";
 import Stats from "./Stats";
-import TotalRevenue from "./TotalRevenue";
+import EnrolledClasses from "./EnrolledClasses";
 import Profile from "./Profile";
-import Inbox from "./Inbox";
-import LatestPro from "./LatestPro";
+import RoyalCollection from "./RoyalCollection";
+import ProjectAcc from "./ProjectAcc";
 import TopNavMenu from "./TopNavMenu";
 import LogoBox from "./LogoBox";
 import Navcomponent from "./Navcomponent";
@@ -39,24 +38,24 @@ const SideBar = () => {
           <div className="container-fluid">
             <div className="row">
               <div className="col-xl-3 col-md-6">
-                <RevenueStats
-                  name="Total Revenue"
+                <Card
+                  name="Platform Activity"
                   number="2231"
                   icon="envelope"
                   iconColor="#3AA76D"
                 />
               </div>
               <div className="col-xl-3 col-md-6">
-                <AnalyticsSales
-                  name="Sales Analytics"
+                <Card
+                  name="Goals"
                   number="8451"
                   icon="wallet"
                   iconColor=" #FF0080"
                 />
               </div>
               <div className="col-xl-3 col-md-6">
-                <RevenueStats
-                  name="Statistics"
+                <Card
+                  name="Number of Problem Solved"
                   number="231"
                   icon="cart-shopping"
                   iconColor="#0070F3"
@@ -64,8 +63,8 @@ const SideBar = () => {
               </div>
 
               <div className="col-xl-3 col-md-6">
-                <AnalyticsSales
-                  name="Daily Sales"
+                <Card
+                  name="NGR (network growth rate)"
                   number="158"
                   icon="envelope"
                   iconColor="rgba(121, 40, 202, 0.85)"
@@ -74,20 +73,19 @@ const SideBar = () => {
             </div>
             {/* mid part of website */}
             <div className="row">
-              <div className="col-xl-4">
-                <DailySale />
+              <div className="col-xl-6">
+                <EnrolledClasses />
+              </div>
+              <div className="col-xl-6">
+                <Attendence />
               </div>
 
-              <div className="col-xl-4">
+              {/* <div className="col-xl-4">
                 <Stats />
-              </div>
-
-              <div className="col-xl-4">
-                <TotalRevenue />
-              </div>
+              </div> */}
             </div>
             {/* profile section */}
-            <div className="row">
+            {/* <div className="row">
               <div className="col-xl-3 col-md-6">
                 <Profile name="deepank joshi" image={user} role="admin" />
               </div>
@@ -103,15 +101,20 @@ const SideBar = () => {
               <div className="col-xl-3 col-md-6">
                 <Profile name="claranotdavid" image={user4} role="Developer" />
               </div>
-            </div>
+            </div> */}
             {/* Last section */}
-            <div className="row">
-              <div className="col-xl-4">
-                <Inbox />
-              </div>
 
-              <div className="col-xl-8">
-                <LatestPro />
+            <div className="row">
+              <div className="col-xl-6">
+                <RoyalCollection />
+              </div>
+              <div className="col-xl-6">
+                <ProjectAcc />
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-xl-12">
+                <Stats />
               </div>
             </div>
           </div>
@@ -121,7 +124,7 @@ const SideBar = () => {
             <div className="row">
               <div className="col-md-6">
                 <script>document.write(new Date().getFullYear())</script>2022 ©
-                Adminto theme by <a href="">Coderthemes</a>
+                genie web <a href=""></a>
               </div>
               <div className="col-md-6">
                 <div className="text-md-end footer-links d-none d-sm-block">

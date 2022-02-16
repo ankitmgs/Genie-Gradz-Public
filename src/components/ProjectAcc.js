@@ -1,6 +1,6 @@
 import React from "react";
 
-const LatestPro = () => {
+const ProjectAcc = () => {
   return (
     <div>
       <div className="card my-0">
@@ -33,7 +33,7 @@ const LatestPro = () => {
             </div>
           </div>
 
-          <h4 className="header-title mt-0 mb-3">Latest Projects</h4>
+          <h4 className="header-title mt-0 mb-3"> Projects Accomplished</h4>
 
           <div className="table-responsive">
             <table className="table table-hover mb-0">
@@ -118,4 +118,4 @@ const LatestPro = () => {
   );
 };
 
-export default LatestPro;
+export default ProjectAcc;

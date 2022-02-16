@@ -1,6 +1,6 @@
 import React from "react";
 
-const RevenueStats = (props) => {
+const Card = (props) => {
   return (
     <div>
       <div className="card">
@@ -53,4 +53,4 @@ const RevenueStats = (props) => {
   );
 };
 
-export default RevenueStats;
+export default Card;

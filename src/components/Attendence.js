@@ -2,68 +2,88 @@ import React from "react";
 import ReactApexChart from "react-apexcharts";
 
 const object = {
-  series: [70, 67, 61, 90],
+  series: [55],
   options: {
     chart: {
-      height: 390,
+      height: 350,
       type: "radialBar",
+      toolbar: {
+        show: true,
+      },
     },
     plotOptions: {
       radialBar: {
-        offsetY: 0,
-        startAngle: 0,
-        endAngle: 270,
+        startAngle: -135,
+        endAngle: 225,
         hollow: {
-          margin: 5,
-          size: "30%",
-          background: "transparent",
+          margin: 0,
+          size: "70%",
+          background: "#fff",
           image: undefined,
+          imageOffsetX: 0,
+          imageOffsetY: 0,
+          position: "front",
+          dropShadow: {
+            enabled: true,
+            top: 3,
+            left: 0,
+            blur: 4,
+            opacity: 0.24,
+          },
         },
+        track: {
+          background: "#fff",
+          strokeWidth: "67%",
+          margin: 0, // margin is in pixels
+          dropShadow: {
+            enabled: true,
+            top: -3,
+            left: 0,
+            blur: 4,
+            opacity: 0.35,
+          },
+        },
+
         dataLabels: {
+          show: true,
           name: {
-            show: false,
+            offsetY: -10,
+            show: true,
+            color: "#888",
+            fontSize: "17px",
           },
           value: {
-            show: false,
+            formatter: function (val) {
+              return parseInt(val);
+            },
+            color: "#111",
+            fontSize: "36px",
+            show: true,
           },
         },
       },
     },
-    colors: ["#1ab7ea", "#0084ff", "#39539E", "#0077B5"],
-    labels: ["project1", "project2", "project3", "project4"],
-    legend: {
-      show: true,
-      floating: true,
-      fontSize: "16px",
-      position: "right",
-      offsetX: 160,
-      offsetY: 15,
-      labels: {
-        useSeriesColors: true,
-      },
-      markers: {
-        size: 0,
-      },
-      formatter: function (seriesName, opts) {
-        return seriesName + ":  " + opts.w.globals.series[opts.seriesIndex];
-      },
-      itemMargin: {
-        vertical: 3,
+    fill: {
+      type: "gradient",
+      gradient: {
+        shade: "dark",
+        type: "horizontal",
+        shadeIntensity: 0.5,
+        gradientToColors: ["#ABE5A1"],
+        inverseColors: true,
+        opacityFrom: 1,
+        opacityTo: 1,
+        stops: [0, 100],
       },
     },
-    responsive: [
-      {
-        breakpoint: 480,
-        options: {
-          legend: {
-            show: false,
-          },
-        },
-      },
-    ],
+    stroke: {
+      lineCap: "round",
+    },
+    labels: ["Overall Attendence %"],
   },
 };
-const DailySale = () => {
+
+const Attendence = () => {
   return (
     <div>
       <div className="card">
@@ -96,14 +116,14 @@ const DailySale = () => {
             </div>
           </div>
 
-          <h4 className="header-title mt-0">Daily Sales</h4>
+          <h4 className="header-title mt-0">Attendence</h4>
 
           <div className="widget-chart text-center">
             <ReactApexChart
               options={object.options}
               series={object.series}
               type="radialBar"
-              height={390}
+              height={350}
             />
           </div>
         </div>
@@ -112,4 +132,4 @@ const DailySale = () => {
   );
 };
 
-export default DailySale;
+export default Attendence;
