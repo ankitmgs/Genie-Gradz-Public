@@ -19,6 +19,8 @@ import TopNavMenu from "./TopNavMenu";
 import LogoBox from "./LogoBox";
 import Navcomponent from "./Navcomponent";
 import SideBarMenu from "./SideBarMenu";
+import RoyalCollection2 from "./RoyalCollection2";
+import ProjectAcc2 from "./ProjectAcc2";
 
 const SideBar = () => {
   return (
@@ -110,6 +112,14 @@ const SideBar = () => {
               </div>
               <div className="col-xl-6">
                 <ProjectAcc />
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-xl-6">
+                <RoyalCollection2 />
+              </div>
+              <div className="col-xl-6">
+                <ProjectAcc2 />
               </div>
             </div>
             <div className="row">

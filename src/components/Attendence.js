@@ -86,7 +86,7 @@ const object = {
 const Attendence = () => {
   return (
     <div>
-      <div className="card">
+      <div className="card" style={{height: "30.5rem"}}>
         <div className="card-body">
           <div className="dropdown float-end">
             <a

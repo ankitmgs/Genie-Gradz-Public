@@ -3,7 +3,11 @@ import React from "react";
 const ProjectAcc = () => {
   return (
     <div>
-      <div className="card my-0">
+      <div className="card my-0" style={{ height: "30rem" }}>
+        <div
+          className="scrollable"
+          style={{ overflowY: "auto" }}
+        >
         <div className="card-body">
           <div className="dropdown float-end">
             <a
@@ -112,6 +116,7 @@ const ProjectAcc = () => {
               </tbody>
             </table>
           </div>
+        </div>
         </div>
       </div>
     </div>

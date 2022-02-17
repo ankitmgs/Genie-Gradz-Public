@@ -66,7 +66,7 @@ const statobj = {
 const Stats = () => {
   return (
     <div>
-      <div className="card">
+      <div className="card mt-3">
         <div className="card-body">
           <div className="dropdown float-end">
             <a
