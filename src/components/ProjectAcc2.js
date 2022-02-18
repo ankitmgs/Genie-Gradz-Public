@@ -19,15 +19,18 @@ const ProjectAcc2 = () => {
                   </h4>
                 </div>
                   <h6 className="text-muted mt-2">Sub Text</h6>
-                <div class="progress">
-                  <div
-                    class="progress-bar w-75"
-                    role="progressbar"
-                    aria-valuenow="75"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  >Demmo text</div>
-                </div>
+                  <div class="progress">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      style={{ width: "55%" }}
+                      aria-valuenow="25"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    >
+                      55%
+                    </div>
+                  </div>
               </div>
             </div>
             <div className="card mt-4" style={{ backgroundColor: "#f7f6f9" }}>
@@ -39,15 +42,18 @@ const ProjectAcc2 = () => {
                   </h4>
                 </div>
                   <h6 className="text-muted mt-2">Sub Text</h6>
-                <div class="progress">
-                  <div
-                    class="progress-bar w-75"
-                    role="progressbar"
-                    aria-valuenow="75"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  >Demmo text</div>
-                </div>
+                  <div class="progress">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      style={{ width: "72%" }}
+                      aria-valuenow="25"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    >
+                      72%
+                    </div>
+                  </div>
               </div>
             </div>
             <div className="card mt-4" style={{ backgroundColor: "#f7f6f9" }}>
@@ -59,15 +65,18 @@ const ProjectAcc2 = () => {
                   </h4>
                 </div>
                   <h6 className="text-muted mt-2">Sub Text</h6>
-                <div class="progress">
-                  <div
-                    class="progress-bar w-75"
-                    role="progressbar"
-                    aria-valuenow="75"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  >Demmo text</div>
-                </div>
+                  <div class="progress">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      style={{ width: "93%" }}
+                      aria-valuenow="25"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    >
+                      93%
+                    </div>
+                  </div>
               </div>
             </div>
           </div>
