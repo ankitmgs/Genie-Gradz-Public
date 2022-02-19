@@ -25,9 +25,9 @@ const RoyalCollection2 = () => {
                   <i className="fa-solid fa-star-half fa-2xl" />
                 </div>
                 <div className="">
-                  <div class="progress">
+                  <div className="progress">
                     <div
-                      class="progress-bar"
+                      className="progress-bar"
                       role="progressbar"
                       style={{ width: "25%" }}
                       aria-valuenow="25"
@@ -46,7 +46,7 @@ const RoyalCollection2 = () => {
             >
               <div className="d-flex flex-row">
                 <i
-                  class="fa-brands fa-python fa-4x m-4"
+                  className="fa-brands fa-python fa-4x m-4"
                   style={{ color: "black" }}
                 />
                 <h5 className="mt-4">Complete Python Course</h5>
@@ -68,18 +68,18 @@ const RoyalCollection2 = () => {
                 526 point left to complete 4 Star
               </h6>
 
-              <div class="progress" style={{ margin: "0 2rem 0 2rem" }}>
-                    <div
-                      class="progress-bar"
-                      role="progressbar"
-                      style={{ width: "45%" }}
-                      aria-valuenow="25"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    >
-                      45%
-                    </div>
-                  </div>
+              <div className="progress" style={{ margin: "0 2rem 0 2rem" }}>
+                <div
+                  className="progress-bar"
+                  role="progressbar"
+                  style={{ width: "45%" }}
+                  aria-valuenow="25"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                >
+                  45%
+                </div>
+              </div>
             </div>
           </div>
         </div>

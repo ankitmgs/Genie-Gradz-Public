@@ -81,10 +81,6 @@ const SideBar = () => {
               <div className="col-xl-6">
                 <Attendence />
               </div>
-
-              {/* <div className="col-xl-4">
-                <Stats />
-              </div> */}
             </div>
             {/* profile section */}
             {/* <div className="row">
@@ -106,14 +102,14 @@ const SideBar = () => {
             </div> */}
             {/* Last section */}
 
-            <div className="row">
+            {/* <div className="row">
               <div className="col-xl-6">
                 <RoyalCollection />
               </div>
               <div className="col-xl-6">
                 <ProjectAcc />
               </div>
-            </div>
+            </div> */}
             <div className="row">
               <div className="col-xl-6">
                 <RoyalCollection2 />

@@ -4984,7 +4984,7 @@ fieldset:disabled .btn {
   background-color: #fff;
   background-clip: border-box;
   border: 0 solid #f7f7f7;
-  border-radius: 30px;
+  border-radius: 15px;
 }
 
 .card > hr {
@@ -5209,7 +5209,7 @@ fieldset:disabled .btn {
 }
 
 .accordion-item {
-  background-color: #ebeff2;
+  background-color: black;
   border: 1px solid rgba(0, 0, 0, 0.125);
 }
 

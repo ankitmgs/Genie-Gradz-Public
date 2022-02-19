@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import user from "../assets/images/users/user-1.jpg";
 import { Accordion } from "react-bootstrap";
 const SideBarMenu = () => {
@@ -19,9 +19,17 @@ const SideBarMenu = () => {
                 tabIndex="0"
                 role="region"
                 aria-label="scrollable content"
-                style={{ height: "100%", overflow: "hidden scroll" }}
+                style={{
+                  height: "100%",
+                  overflow: "hidden scroll",
+                  backgroundColor: "black",
+                  color: "white",
+                }}
               >
-                <div className="simplebar-content" style={{ padding: "0px" }}>
+                <div
+                  className="simplebar-content"
+                  style={{ paddingTop: "40px" }}
+                >
                   <div className="user-box text-center">
                     <img
                       src={user}
@@ -119,8 +127,12 @@ const SideBarMenu = () => {
                             Email
                           </Accordion.Header>
 
-                          <Accordion.Body>Inbox</Accordion.Body>
-                          <Accordion.Body>Email Template</Accordion.Body>
+                          <Accordion.Body>
+                            <a href="#">Inbox</a>
+                          </Accordion.Body>
+                          <Accordion.Body>
+                            <a href="#">Email Template</a>
+                          </Accordion.Body>
                         </Accordion.Item>
                       </Accordion>
 
@@ -138,8 +150,14 @@ const SideBarMenu = () => {
                             />
                             Tasks
                           </Accordion.Header>
-                          <Accordion.Body>Kanban Board</Accordion.Body>
-                          <Accordion.Body>Details</Accordion.Body>
+                          <Accordion.Body>
+                            {" "}
+                            <a href="#">Kanban Board</a>
+                          </Accordion.Body>
+                          <Accordion.Body>
+                            {" "}
+                            <a href="#">Details</a>
+                          </Accordion.Body>
                         </Accordion.Item>
                       </Accordion>
 
@@ -164,8 +182,14 @@ const SideBarMenu = () => {
                             />
                             Tasks
                           </Accordion.Header>
-                          <Accordion.Body>Member List</Accordion.Body>
-                          <Accordion.Body>Profile</Accordion.Body>
+                          <Accordion.Body>
+                            {" "}
+                            <a href="#">Member List</a>
+                          </Accordion.Body>
+                          <Accordion.Body>
+                            {" "}
+                            <a href="#">Profile</a>
+                          </Accordion.Body>
                         </Accordion.Item>
                       </Accordion>
 
@@ -185,12 +209,30 @@ const SideBarMenu = () => {
                             />
                             Auth Pages
                           </Accordion.Header>
-                          <Accordion.Body>Login</Accordion.Body>
-                          <Accordion.Body>Register</Accordion.Body>
-                          <Accordion.Body>Recover Password</Accordion.Body>
-                          <Accordion.Body>Lock Screen</Accordion.Body>
-                          <Accordion.Body>Confirm Mail</Accordion.Body>
-                          <Accordion.Body>Logout</Accordion.Body>
+                          <Accordion.Body>
+                            {" "}
+                            <a href="#">Login</a>
+                          </Accordion.Body>
+                          <Accordion.Body>
+                            {" "}
+                            <a href="#">Register</a>
+                          </Accordion.Body>
+                          <Accordion.Body>
+                            {" "}
+                            <a href="#">Recover Password</a>
+                          </Accordion.Body>
+                          <Accordion.Body>
+                            {" "}
+                            <a href="#">Lock Screen</a>
+                          </Accordion.Body>
+                          <Accordion.Body>
+                            {" "}
+                            <a href="#">Confirm Mail</a>
+                          </Accordion.Body>
+                          <Accordion.Body>
+                            {" "}
+                            <a href="#">Logout</a>
+                          </Accordion.Body>
                         </Accordion.Item>
                       </Accordion>
 
@@ -208,16 +250,40 @@ const SideBarMenu = () => {
                             />
                             Extra Pages
                           </Accordion.Header>
-                          <Accordion.Body>Stater</Accordion.Body>
-                          <Accordion.Body>Pricing</Accordion.Body>
-                          <Accordion.Body>Timeline</Accordion.Body>
-                          <Accordion.Body>Invoice</Accordion.Body>
-                          <Accordion.Body>FAQs</Accordion.Body>
-                          <Accordion.Body>Gallery</Accordion.Body>
-                          <Accordion.Body>Error 404</Accordion.Body>
-                          <Accordion.Body>Error 505</Accordion.Body>
-                          <Accordion.Body>Maintainance</Accordion.Body>
-                          <Accordion.Body>Coming Soon</Accordion.Body>
+                          <Accordion.Body>
+                            {" "}
+                            <a href="#">Stater</a>
+                          </Accordion.Body>
+                          <Accordion.Body>
+                            {" "}
+                            <a href="#">Pricing</a>
+                          </Accordion.Body>
+                          <Accordion.Body>
+                            {" "}
+                            <a href="#">Timeline</a>
+                          </Accordion.Body>
+                          <Accordion.Body>
+                            {" "}
+                            <a href="#">Invoice</a>
+                          </Accordion.Body>
+                          <Accordion.Body>
+                            <a href="#">FAQs</a>
+                          </Accordion.Body>
+                          <Accordion.Body>
+                            <a href="#">Gallery</a>
+                          </Accordion.Body>
+                          <Accordion.Body>
+                            <a href="#">Error 404</a>
+                          </Accordion.Body>
+                          <Accordion.Body>
+                            <a href="#">Error 505</a>
+                          </Accordion.Body>
+                          <Accordion.Body>
+                            <a href="#">Maintainance</a>
+                          </Accordion.Body>
+                          <Accordion.Body>
+                            <a href="#">Coming Soon</a>
+                          </Accordion.Body>
                         </Accordion.Item>
                       </Accordion>
 
