@@ -18,19 +18,19 @@ const ProjectAcc2 = () => {
                     Project 1 (Project Name)
                   </h4>
                 </div>
-                  <h6 className="text-muted mt-2">Sub Text</h6>
-                  <div class="progress">
-                    <div
-                      class="progress-bar"
-                      role="progressbar"
-                      style={{ width: "55%" }}
-                      aria-valuenow="25"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    >
-                      55%
-                    </div>
+                <h6 className="text-muted mt-2">Sub Text</h6>
+                <div className="progress">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    style={{ width: "55%" }}
+                    aria-valuenow="25"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    55%
                   </div>
+                </div>
               </div>
             </div>
             <div className="card mt-4" style={{ backgroundColor: "#f7f6f9" }}>
@@ -41,42 +41,42 @@ const ProjectAcc2 = () => {
                     Project 2 (Project Name)
                   </h4>
                 </div>
-                  <h6 className="text-muted mt-2">Sub Text</h6>
-                  <div class="progress">
-                    <div
-                      class="progress-bar"
-                      role="progressbar"
-                      style={{ width: "72%" }}
-                      aria-valuenow="25"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    >
-                      72%
-                    </div>
+                <h6 className="text-muted mt-2">Sub Text</h6>
+                <div className="progress">
+                  <div
+                    className="progress-bar"
+                    role="progressbar"
+                    style={{ width: "72%" }}
+                    aria-valuenow="25"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    72%
                   </div>
+                </div>
               </div>
             </div>
             <div className="card mt-4" style={{ backgroundColor: "#f7f6f9" }}>
               <div className="card-body">
                 <div className="d-flex flex-row">
-                  <i class="fa-solid fa-circle fa-4x" />
+                  <i className="fa-solid fa-circle fa-4x" />
                   <h4 className="" style={{ marginLeft: "2rem" }}>
                     Project 3 (Project Name)
                   </h4>
                 </div>
-                  <h6 className="text-muted mt-2">Sub Text</h6>
-                  <div class="progress">
-                    <div
-                      class="progress-bar"
-                      role="progressbar"
-                      style={{ width: "93%" }}
-                      aria-valuenow="25"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    >
-                      93%
-                    </div>
+                <h6 className="text-muted mt-2">Sub Text</h6>
+                <div className="progress">
+                  <div
+                    className="progress-bar"
+                    role="progressbar"
+                    style={{ width: "93%" }}
+                    aria-valuenow="25"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    93%
                   </div>
+                </div>
               </div>
             </div>
           </div>

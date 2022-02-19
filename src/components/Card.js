@@ -14,23 +14,6 @@ const Card = (props) => {
             >
               <i className="mdi mdi-dots-vertical"></i>
             </a>
-            <div className="dropdown-menu dropdown-menu-end">
-              <a href="#" className="dropdown-item">
-                Action
-              </a>
-
-              <a href="#" className="dropdown-item">
-                Another action
-              </a>
-
-              <a href="#" className="dropdown-item">
-                Something else
-              </a>
-
-              <a href="#" className="dropdown-item">
-                Separated link
-              </a>
-            </div>
           </div>
 
           <h4 className="header-title mt-0 mb-4">{props.name}</h4>
