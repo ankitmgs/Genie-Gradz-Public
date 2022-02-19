@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import user from "../assets/images/users/user-1.jpg";
 import { Accordion } from "react-bootstrap";
+import { Link } from "react-router-dom";
 const SideBarMenu = () => {
   return (
     <div>
@@ -38,34 +39,34 @@ const SideBarMenu = () => {
                       className="rounded-circle img-thumbnail avatar-md"
                     />
                     <div className="dropdown">
-                      <a
-                        href="#"
+                      <Link
+                        to="/profile"
                         className="user-name dropdown-toggle h5 mt-2 mb-1 d-block"
                         data-bs-toggle="dropdown"
                         aria-expanded="false"
                       >
                         Nowak Helme
-                      </a>
+                      </Link>
                       <div className="dropdown-menu user-pro-dropdown">
-                        <a href="#" className="dropdown-item notify-item">
+                        <Link to="#" className="dropdown-item notify-item">
                           <i className="fe-user me-1"></i>
                           <span>My Account</span>
-                        </a>
+                        </Link>
 
-                        <a href="#" className="dropdown-item notify-item">
+                        <Link to="#" className="dropdown-item notify-item">
                           <i className="fe-settings me-1"></i>
                           <span>Settings</span>
-                        </a>
+                        </Link>
 
-                        <a href="#" className="dropdown-item notify-item">
+                        <Link to="#" className="dropdown-item notify-item">
                           <i className="fe-lock me-1"></i>
                           <span>Lock Screen</span>
-                        </a>
+                        </Link>
 
-                        <a href="#" className="dropdown-item notify-item">
+                        <Link to="#" className="dropdown-item notify-item">
                           <i className="fe-log-out me-1"></i>
                           <span>Logout</span>
-                        </a>
+                        </Link>
                       </div>
                     </div>
 
@@ -73,15 +74,15 @@ const SideBarMenu = () => {
 
                     <ul className="list-inline">
                       <li className="list-inline-item">
-                        <a href="#" className="text-muted left-user-info">
+                        <Link to="#" className="text-muted left-user-info">
                           <i className="mdi mdi-cog"></i>
-                        </a>
+                        </Link>
                       </li>
 
                       <li className="list-inline-item">
-                        <a href="#">
+                        <Link to="#">
                           <i className="mdi mdi-power"></i>
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </div>
@@ -90,29 +91,29 @@ const SideBarMenu = () => {
                       <li className="menu-title">Navigation</li>
 
                       <li className="menuitem-active">
-                        <a href="index.html" className="active">
+                        <Link to="index.html" className="active">
                           <i className="mdi mdi-view-dashboard-outline"></i>
                           <span className="badge bg-success rounded-pill float-end">
                             9+
                           </span>
                           <span> Dashboard </span>
-                        </a>
+                        </Link>
                       </li>
 
                       <li className="menu-title mt-2">Apps</li>
 
                       <li>
-                        <a href="apps-calendar.html">
+                        <Link to="/calender">
                           <i className="mdi mdi-calendar-blank-outline"></i>
                           <span> Calendar </span>
-                        </a>
+                        </Link>
                       </li>
 
                       <li>
-                        <a href="apps-chat.html">
+                        <Link to="/chat">
                           <i className="mdi mdi-forum-outline"></i>
                           <span> Chat </span>
-                        </a>
+                        </Link>
                       </li>
                       <Accordion flush>
                         <Accordion.Item
@@ -128,10 +129,10 @@ const SideBarMenu = () => {
                           </Accordion.Header>
 
                           <Accordion.Body>
-                            <a href="#">Inbox</a>
+                            <Link to="/inbox">Inbox</Link>
                           </Accordion.Body>
                           <Accordion.Body>
-                            <a href="#">Email Template</a>
+                            <Link to="emailtemplate">Email Template</Link>
                           </Accordion.Body>
                         </Accordion.Item>
                       </Accordion>
@@ -152,20 +153,20 @@ const SideBarMenu = () => {
                           </Accordion.Header>
                           <Accordion.Body>
                             {" "}
-                            <a href="#">Kanban Board</a>
+                            <Link to="/kanbanboard">Kanban Board</Link>
                           </Accordion.Body>
                           <Accordion.Body>
                             {" "}
-                            <a href="#">Details</a>
+                            <Link to="/details">Details</Link>
                           </Accordion.Body>
                         </Accordion.Item>
                       </Accordion>
 
                       <li>
-                        <a href="apps-projects.html">
+                        <Link to="/project">
                           <i className="mdi mdi-briefcase-variant-outline"></i>
                           <span> Projects </span>
-                        </a>
+                        </Link>
                       </li>
 
                       <Accordion flush>
@@ -184,11 +185,11 @@ const SideBarMenu = () => {
                           </Accordion.Header>
                           <Accordion.Body>
                             {" "}
-                            <a href="#">Member List</a>
+                            <Link to="memberlist">Member List</Link>
                           </Accordion.Body>
                           <Accordion.Body>
                             {" "}
-                            <a href="#">Profile</a>
+                            <Link to="/profile">Profile</Link>
                           </Accordion.Body>
                         </Accordion.Item>
                       </Accordion>
@@ -211,27 +212,27 @@ const SideBarMenu = () => {
                           </Accordion.Header>
                           <Accordion.Body>
                             {" "}
-                            <a href="#">Login</a>
+                            <Link to="/login">Login</Link>
                           </Accordion.Body>
                           <Accordion.Body>
                             {" "}
-                            <a href="#">Register</a>
+                            <Link to="/register">Register</Link>
                           </Accordion.Body>
                           <Accordion.Body>
                             {" "}
-                            <a href="#">Recover Password</a>
+                            <Link to="/recoverpassword">Recover Password</Link>
                           </Accordion.Body>
                           <Accordion.Body>
                             {" "}
-                            <a href="#">Lock Screen</a>
+                            <Link to="/lockscreen">Lock Screen</Link>
                           </Accordion.Body>
                           <Accordion.Body>
                             {" "}
-                            <a href="#">Confirm Mail</a>
+                            <Link to="/confirmmail">Confirm Mail</Link>
                           </Accordion.Body>
                           <Accordion.Body>
                             {" "}
-                            <a href="#">Logout</a>
+                            <Link to="#">Logout</Link>
                           </Accordion.Body>
                         </Accordion.Item>
                       </Accordion>
@@ -252,37 +253,37 @@ const SideBarMenu = () => {
                           </Accordion.Header>
                           <Accordion.Body>
                             {" "}
-                            <a href="#">Stater</a>
+                            <Link to="#">Stater</Link>
                           </Accordion.Body>
                           <Accordion.Body>
                             {" "}
-                            <a href="#">Pricing</a>
+                            <Link to="#">Pricing</Link>
                           </Accordion.Body>
                           <Accordion.Body>
                             {" "}
-                            <a href="#">Timeline</a>
+                            <Link to="#">Timeline</Link>
                           </Accordion.Body>
                           <Accordion.Body>
                             {" "}
-                            <a href="#">Invoice</a>
+                            <Link to="#">Invoice</Link>
                           </Accordion.Body>
                           <Accordion.Body>
-                            <a href="#">FAQs</a>
+                            <Link to="#">FAQs</Link>
                           </Accordion.Body>
                           <Accordion.Body>
-                            <a href="#">Gallery</a>
+                            <Link to="#">Gallery</Link>
                           </Accordion.Body>
                           <Accordion.Body>
-                            <a href="#">Error 404</a>
+                            <Link to="#">Error 404</Link>
                           </Accordion.Body>
                           <Accordion.Body>
-                            <a href="#">Error 505</a>
+                            <Link to="#">Error 505</Link>
                           </Accordion.Body>
                           <Accordion.Body>
-                            <a href="#">Maintainance</a>
+                            <Link to="#">Maintainance</Link>
                           </Accordion.Body>
                           <Accordion.Body>
-                            <a href="#">Coming Soon</a>
+                            <Link to="#">Coming Soon</Link>
                           </Accordion.Body>
                         </Accordion.Item>
                       </Accordion>
@@ -344,45 +345,45 @@ const SideBarMenu = () => {
                       </Accordion>
 
                       <li>
-                        <a href="widgets.html">
+                        <Link to="widgets.html">
                           <i className="mdi mdi-gift-outline"></i>
                           <span> Widgets </span>
-                        </a>
+                        </Link>
                       </li>
 
                       <li>
-                        <a href="#sidebarExtendedui" data-bs-toggle="collapse">
+                        <Link to="#sidebarExtendedui" data-bs-toggle="collapse">
                           <i className="mdi mdi-layers-outline"></i>
                           <span className="badge bg-info float-end">Hot</span>
                           <span> Extended UI </span>
-                        </a>
+                        </Link>
                         <div className="collapse" id="sidebarExtendedui">
                           <ul className="nav-second-level">
                             <li>
-                              <a href="extended-range-slider.html">
+                              <Link to="extended-range-slider.html">
                                 Range Slider
-                              </a>
+                              </Link>
                             </li>
                             <li>
-                              <a href="extended-sweet-alert.html">
+                              <Link to="extended-sweet-alert.html">
                                 Sweet Alert
-                              </a>
+                              </Link>
                             </li>
                             <li>
-                              <a href="extended-draggable-cards.html">
+                              <Link to="extended-draggable-cards.html">
                                 Draggable Cards
-                              </a>
+                              </Link>
                             </li>
                             <li>
-                              <a href="extended-tour.html">Tour Page</a>
+                              <Link to="extended-tour.html">Tour Page</Link>
                             </li>
                             <li>
-                              <a href="extended-notification.html">
+                              <Link to="extended-notification.html">
                                 Notification
-                              </a>
+                              </Link>
                             </li>
                             <li>
-                              <a href="extended-treeview.html">Tree View</a>
+                              <Link to="extended-treeview.html">Tree View</Link>
                             </li>
                           </ul>
                         </div>

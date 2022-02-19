@@ -46,12 +46,13 @@ body {
 }
 
 .user-box .user-name {
-  color: #343a40;
+  color: #f6f6f6;
 }
 
 #sidebar-menu > ul {
   list-style: none;
   padding: 0;
+  padding-bottom: 42rem;
 }
 
 #sidebar-menu > ul > li > a {

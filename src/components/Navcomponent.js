@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import SideBarMenu from "./SideBarMenu";
 
 const Navcomponent = () => {
-  const [showSideBar, setSidebar] = useState(true);
+  const [showSideBar, setSidebar] = useState(false);
   const handleClick = () => {
     setSidebar(!showSideBar);
   };
@@ -22,9 +22,11 @@ const Navcomponent = () => {
           <h4 className="page-title-main">Dashboard</h4>
         </li>
       </ul>
+      {showSideBar ? (
       <div className="responsiveSidebar">
-      {showSideBar ? <SideBarMenu /> : null}
+       <SideBarMenu />
       </div>
+      ) : null}
     </div>
   );
 };
