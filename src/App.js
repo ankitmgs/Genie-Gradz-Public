@@ -8,7 +8,6 @@ import "./assets/css/app.css";
 import "./assets/css/icon.css";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import UserProfile from "./components/userProfile";
 import Calender from "./components/Calender";
 import Chat from "./components/Chat";
 import Inbox from "./components/Inbox";
@@ -20,6 +19,7 @@ import MemberList from "./components/MemberList";
 import RecoverPassword from "./components/RecoverPassword";
 import LockScreen from "./components/LockScreen";
 import ConfirmMail from "./components/ConfirmMail";
+import UserProfile from "./components/UserProfile";
 
 function App() {
   return (
