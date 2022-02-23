@@ -123,6 +123,7 @@ const UserProfile2 = () => {
                       padding: "20px",
                       maxWidth: "500px",
                       margin: "16px",
+                      overflowX: "hidden"
                     },
                   }}
                 >
@@ -165,6 +166,7 @@ const UserProfile2 = () => {
                       padding: "20px",
                       maxWidth: "500px",
                       margin: "16px",
+                      overflowX: "hidden"
                     },
                   }}
                 >
