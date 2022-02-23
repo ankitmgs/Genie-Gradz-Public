@@ -411,7 +411,9 @@ button {
   -webkit-appearance: button;
 }
 
-[type="button"]:not(:disabled),
+[type="button"]:not(:disabled){
+  background-color: gray;
+}
 [type="reset"]:not(:disabled),
 [type="submit"]:not(:disabled),
 button:not(:disabled) {

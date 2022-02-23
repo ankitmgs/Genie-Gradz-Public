@@ -1,17 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import "../assets/css/userProfile.css";
-import PropTypes from 'prop-types';
-import SwipeableViews from 'react-swipeable-views';
-import { useTheme } from '@mui/material/styles';
-import AppBar from '@mui/material/AppBar';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
+import PropTypes from "prop-types";
+import SwipeableViews from "react-swipeable-views";
+import { useTheme } from "@mui/material/styles";
+import AppBar from "@mui/material/AppBar";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
 import RoyalCollection from "./RoyalCollection";
 import UserProfileImageTab from "./UserProfileImageTab";
 import UserProfileVideoTab from "./UserProfileVideoTab";
-
+import Modal from "react-modal";
+import FollowersModal from "./FollowersModal";
+import FollowingModal from "./FollowingModal";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -42,14 +44,11 @@ TabPanel.propTypes = {
 function a11yProps(index) {
   return {
     id: `full-width-tab-${index}`,
-    'aria-controls': `full-width-tabpanel-${index}`,
+    "aria-controls": `full-width-tabpanel-${index}`,
   };
 }
 
-
-
 const UserProfile2 = () => {
-
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
 
@@ -60,6 +59,10 @@ const UserProfile2 = () => {
   const handleChangeIndex = (index) => {
     setValue(index);
   };
+
+  const [followersmodelIsOpen, setFollowersmodelIsOpen] = useState(false);
+
+  const [followingmodelIsOpen, setFollowingModelIsOpen] = useState(false);
 
 
   return (
@@ -96,9 +99,41 @@ const UserProfile2 = () => {
                       "system-ui, Helvetica Neue, Helvetica, Arial, sans-serif",
                     fontWeight: "normal",
                   }}
+                  onClick={() => setFollowersmodelIsOpen(true)}
                 >
                   Followers <strong class="e0">12</strong>
                 </li>
+                <Modal
+                  className="mx-auto"
+                  isOpen={followersmodelIsOpen}
+                  onRequestClose={() => setFollowersmodelIsOpen(false)}
+                  style={{
+                    overlay: { zIndex: "1000" },
+                    content: {
+                      backgroundColor: "white",
+                      position: "absolute",
+                      top: "40px",
+                      left: "40px",
+                      right: "40px",
+                      bottom: "40px",
+                      border: "1px solid #ccc",
+                      overflow: "auto",
+                      borderRadius: "4px",
+                      outline: "none",
+                      padding: "20px",
+                      maxWidth: "500px",
+                      margin: "16px",
+                    },
+                  }}
+                >
+                  <button
+                    className="btn btn-primary float-end"
+                    onClick={() => setFollowersmodelIsOpen(false)}
+                  >
+                    Close
+                  </button>
+                  <FollowersModal />
+                </Modal>
                 <li
                   class="b7 fa fb b0 be bj bk bl bm bi fc bd bx"
                   style={{
@@ -106,9 +141,41 @@ const UserProfile2 = () => {
                       "system-ui, Helvetica Neue, Helvetica, Arial, sans-serif",
                     fontWeight: "normal",
                   }}
+                  onClick={() => setFollowingModelIsOpen(true)}
                 >
                   Following <strong class="e0">8</strong>
                 </li>
+                <Modal
+                  className="mx-auto"
+                  isOpen={followingmodelIsOpen}
+                  onRequestClose={() => setFollowingModelIsOpen(false)}
+                  style={{
+                    overlay: { zIndex: "1000" },
+                    content: {
+                      backgroundColor: "white",
+                      position: "absolute",
+                      top: "40px",
+                      left: "40px",
+                      right: "40px",
+                      bottom: "40px",
+                      border: "1px solid #ccc",
+                      overflow: "auto",
+                      borderRadius: "4px",
+                      outline: "none",
+                      padding: "20px",
+                      maxWidth: "500px",
+                      margin: "16px",
+                    },
+                  }}
+                >
+                  <button
+                    className="btn btn-primary float-end"
+                    onClick={() => setFollowingModelIsOpen(false)}
+                  >
+                    Close
+                  </button>
+                  <FollowingModal />
+                </Modal>
               </ul>
             </div>
           </div>
@@ -121,7 +188,7 @@ const UserProfile2 = () => {
                 value={value}
                 onChange={handleChange}
                 indicatorColor="secondary"
-                textColor="inherit"
+                textColor="none"
                 variant="fullWidth"
                 aria-label="full width tabs example"
               >
@@ -136,7 +203,7 @@ const UserProfile2 = () => {
               onChangeIndex={handleChangeIndex}
             >
               <TabPanel value={value} index={0} dir={theme.direction}>
-                  <UserProfileImageTab />
+                <UserProfileImageTab />
               </TabPanel>
               <TabPanel value={value} index={1} dir={theme.direction}>
                 <UserProfileVideoTab />
@@ -147,8 +214,6 @@ const UserProfile2 = () => {
             </SwipeableViews>
           </Box>
         </div>
-
-
       </div>
       <footer class="ae" style={{ backgroundColor: "white" }}>
         <div class="ae ap aq ar as at au av">

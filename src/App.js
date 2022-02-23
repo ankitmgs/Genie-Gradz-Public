@@ -20,11 +20,13 @@ import RecoverPassword from "./components/RecoverPassword";
 import LockScreen from "./components/LockScreen";
 import ConfirmMail from "./components/ConfirmMail";
 import UserProfile from "./components/UserProfile";
+import SideBarMenu from "./components/SideBarMenu";
 
 function App() {
   return (
     <div>
       <BrowserRouter>
+      {/* <SideBarMenu /> */}
         <Routes>
           <Route element={<Dashboard />} path="/" />
           <Route element={<Login />} path="/login" />
