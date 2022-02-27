@@ -14,6 +14,8 @@ import UserProfileVideoTab from "./UserProfileVideoTab";
 import Modal from "react-modal";
 import FollowersModal from "./FollowersModal";
 import FollowingModal from "./FollowingModal";
+import { Button } from "@mui/material";
+import CreatePost from "./CreatePost";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -64,6 +66,7 @@ const UserProfile2 = () => {
 
   const [followingmodelIsOpen, setFollowingModelIsOpen] = useState(false);
 
+  const [postmodelIsOpen, setPostmodelIsOpen] = useState(false);
 
   return (
     <div>
@@ -82,6 +85,39 @@ const UserProfile2 = () => {
                 <h3 class="bj f5 ds f6 e0 f7 f8">Lucinda Kerr</h3>
                 <p class="bj bk bl bm be">Art &amp; Social Activist</p>
               </div>
+              <Button
+                variant="contained"
+                onClick={() => setPostmodelIsOpen(true)}
+              >
+                Create Post
+              </Button>
+              <Modal
+                className="mx-auto"
+                isOpen={postmodelIsOpen}
+                onRequestClose={() => setPostmodelIsOpen(false)}
+                style={{
+                  overlay: { zIndex: "1000" },
+                  content: {
+                    backgroundColor: "white",
+                    position: "absolute",
+                    top: "40px",
+                    left: "40px",
+                    right: "40px",
+                    bottom: "40px",
+                    border: "1px solid #ccc",
+                    overflow: "auto",
+                    borderRadius: "4px",
+                    outline: "none",
+                    padding: "20px",
+                    maxWidth: "500px",
+                    margin: "16px",
+                    overflowX: "hidden",
+                  },
+                }}
+              >
+                <button className="btn btn-primary float-end" onClick={() => setPostmodelIsOpen(false)}>Close</button>
+                <CreatePost />
+              </Modal>
               <ul class="profile-menu af f9">
                 <li
                   class="active b7 fa fb b0 be bj bk bl bm bi fc bd bx"
@@ -123,7 +159,7 @@ const UserProfile2 = () => {
                       padding: "20px",
                       maxWidth: "500px",
                       margin: "16px",
-                      overflowX: "hidden"
+                      overflowX: "hidden",
                     },
                   }}
                 >
@@ -166,7 +202,7 @@ const UserProfile2 = () => {
                       padding: "20px",
                       maxWidth: "500px",
                       margin: "16px",
-                      overflowX: "hidden"
+                      overflowX: "hidden",
                     },
                   }}
                 >

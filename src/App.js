@@ -21,6 +21,7 @@ import LockScreen from "./components/LockScreen";
 import ConfirmMail from "./components/ConfirmMail";
 import UserProfile from "./components/UserProfile";
 import SideBarMenu from "./components/SideBarMenu";
+import Certificates from "./components/Certificates";
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
           <Route element={<RecoverPassword />} path="/recoverpassword" />
           <Route element={<LockScreen />} path="/lockscreen" />
           <Route element={<ConfirmMail />} path="/confirmmail" />
+          <Route element={<Certificates />} path="/certificates" />
         </Routes>
       </BrowserRouter>
     </div>

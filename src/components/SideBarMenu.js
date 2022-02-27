@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import user from "../assets/images/users/user-1.jpg";
 import { Accordion } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { Icon } from "@iconify/react";
+
 const SideBarMenu = () => {
   return (
     <div>
@@ -91,7 +93,7 @@ const SideBarMenu = () => {
                       <li className="menu-title">Navigation</li>
 
                       <li className="menuitem-active">
-                        <Link to="index.html" className="active">
+                        <Link to="" className="active">
                           <i className="mdi mdi-view-dashboard-outline"></i>
                           <span className="badge bg-success rounded-pill float-end">
                             9+
@@ -102,6 +104,12 @@ const SideBarMenu = () => {
 
                       <li className="menu-title mt-2">Apps</li>
 
+                      <li>
+                        <Link to="/certificates">
+                        <Icon icon="fluent:certificate-24-regular" />
+                          <span> Certificates </span>
+                        </Link>
+                      </li>
                       <li>
                         <Link to="/calender">
                           <i className="mdi mdi-calendar-blank-outline"></i>
