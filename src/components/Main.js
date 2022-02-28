@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../assets/css/appDark.css";
 import "../assets/css/app.css";
 import user from "../assets/images/users/user-1.jpg";
@@ -23,13 +23,37 @@ import RoyalCollection2 from "./RoyalCollection2";
 import ProjectAcc2 from "./ProjectAcc2";
 
 const SideBar = () => {
+  const [showSideBar, setSidebar] = useState(false);
+  const handleClick = () => {
+    setSidebar(!showSideBar);
+  };
   return (
     <div id="wrapper" className="show">
       {/* navBar component */}
       <div className="navbar-custom">
         <TopNavMenu />
         <LogoBox />
-        <Navcomponent />
+        {/* <Navcomponent /> */}
+        <ul className={"list-unstyled topnav-menu topnav-menu-left mb-0"}>
+          <li>
+            <button
+              className="button-menu-mobile disable-btn waves-effect"
+              onClick={handleClick}
+            >
+              <i className="fe-menu"></i>
+            </button>
+          </li>
+
+          <li>
+            <h4 className="page-title-main">Dashboard</h4>
+          </li>
+        </ul>
+
+        {showSideBar ? (
+          <div className="responsiveSidebar">
+            <SideBarMenu />
+          </div>
+        ) : null}
       </div>
       <div className="left-side-menu">
         <SideBarMenu />

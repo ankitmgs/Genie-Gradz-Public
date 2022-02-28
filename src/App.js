@@ -9,7 +9,7 @@ import "./assets/css/icon.css";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Calender from "./components/Calender";
-import Chat from "./components/Chat";
+import Notes from "./components/Notes";
 import Inbox from "./components/Inbox";
 import EmailTemplate from "./components/EmailTemplate";
 import KanbanBoard from "./components/KanbanBoard";
@@ -27,14 +27,13 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-      {/* <SideBarMenu /> */}
         <Routes>
           <Route element={<Dashboard />} path="/" />
           <Route element={<Login />} path="/login" />
           <Route element={<Register />} path="/register" />
           <Route element={<UserProfile />} path="/profile" />
           <Route element={<Calender />} path="/calender" />
-          <Route element={<Chat />} path="/chat" />
+          <Route element={<Notes />} path="/notes" />
           <Route element={<Inbox />} path="/inbox" />
           <Route element={<EmailTemplate />} path="/emailtemplate" />
           <Route element={<KanbanBoard />} path="/kanbanboard" />

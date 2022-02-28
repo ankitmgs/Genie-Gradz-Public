@@ -22,4 +22,41 @@ code {
 .responsiveSidebar {
   width: 240px;
 }
+.bars {
+  background-color: black;
+  padding: 10px;
+  border-radius: 20%;
+  margin: 20px 20px;
+  border-width: 2px;
+  border-color: #66a4e0;
+  border: none;
+}
+.card-structure {
+  background-color: antiquewhite;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 600px;
+}
+.parent-container {
+  /* position: absolute;
+  margin: auto;
+  top: 50%;
+  left: 20%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pdf {
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid red;
+  width: 500px;
+  padding: 10px;
+}
+.pdf-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+  margin-top: 22px;
+}
