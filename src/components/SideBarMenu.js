@@ -118,9 +118,9 @@ const SideBarMenu = () => {
                       </li>
 
                       <li>
-                        <Link to="/chat">
+                        <Link to="/notes">
                           <i className="mdi mdi-forum-outline"></i>
-                          <span> Chat </span>
+                          <span> Notes </span>
                         </Link>
                       </li>
                       <Accordion flush>
