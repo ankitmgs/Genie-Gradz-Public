@@ -20,6 +20,8 @@ code {
   color: #66a4e0;
 }
 .responsiveSidebar {
+  position: absolute;
+  z-index: 1;
   width: 240px;
 }
 .bars {
@@ -32,10 +34,14 @@ code {
   border: none;
 }
 .card-structure {
-  background-color: antiquewhite;
-  border: 2px solid black;
+  background-color: #fff;
+  border: 1px solid #dadce0;
   border-radius: 10px;
   width: 600px;
+  height: 60px;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
 }
 .parent-container {
   /* position: absolute;
@@ -59,4 +65,23 @@ code {
   align-items: center;
 
   margin-top: 22px;
+}
+
+#myAccordion {
+  max-width: 805px;
+}
+.note {
+  width: 800px !important;
+  color: #3c4043 !important;
+  background-color: #fff !important;
+}
+.card-body {
+  background-color: #fff !important;
+  border: 1px solid #dadce0;
+}
+.assignment {
+  color: #3c4043 !important;
+}
+.assignment:hover {
+  color: #e8710a !important;
 }

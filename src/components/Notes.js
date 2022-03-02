@@ -33,16 +33,23 @@ const Notes = () => {
       </div>
       <div>
         <h1 className="text-center">Notes (pdf,ppt,worksheets)</h1>
-        <div className="parent-container my-4 text-center">
+        <div className="parent-container my-4 ">
           <div>
             <NotesComponent
               pdfTitle="Python full course Zero to Hero"
               author="Akansha"
+              id="One"
             />
 
             <NotesComponent
               pdfTitle="Core java Notes basic to Advance "
               author="Sachin"
+              id="Two"
+            />
+            <NotesComponent
+              pdfTitle="Advance java Notes basic to Advance "
+              author="Lokesh Singh"
+              id="Three"
             />
             <NotesComponent
               pdfTitle="Advance java Notes basic to Advance "

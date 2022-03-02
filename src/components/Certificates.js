@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import CourseCertificates from '../components/CourseCertificates';
-import ProjectCertificates from '../components/ProjectCertificates';
+import CourseCertificates from "../components/CourseCertificates";
+import ProjectCertificates from "../components/ProjectCertificates";
 import SideBarMenu from "./SideBarMenu";
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const Certificates = () => {
@@ -11,7 +11,7 @@ const Certificates = () => {
     setSidebar(!showSideBar);
   };
   return (
-    <div>
+    <>
       <div>
         <ul className={"list-unstyled topnav-menu topnav-menu-left mb-0"}>
           <li
@@ -26,16 +26,17 @@ const Certificates = () => {
             </button>
           </li>
         </ul>
-
         {showSideBar ? (
           <div className="responsiveSidebar float-start">
             <SideBarMenu />
           </div>
         ) : null}
         {/* end */}
-      </div>
-      <h2 className="d-flex justify-content-center mt-3">Licenses & Certificates</h2>
-      {/* <div className="container">
+        <div>
+          <h2 className="d-flex justify-content-center mt-3">
+            Licenses & Certificates
+          </h2>
+          {/* <div className="container">
         <div className="row">
           <div className="col-lg-3 col-sm-12 col-md-6">
             <div className="card p-1" style={{borderRadius: "3px"}}>
@@ -99,9 +100,11 @@ const Certificates = () => {
           </div>
         </div>
       </div> */}
-      <CourseCertificates  />
-      <ProjectCertificates />
-    </div>
+          <CourseCertificates />
+          <ProjectCertificates />
+        </div>
+      </div>
+    </>
   );
 };
 
