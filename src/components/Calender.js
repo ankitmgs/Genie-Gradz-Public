@@ -26,10 +26,9 @@ const Calender = () => {
           <div className="responsiveSidebar float-start">
             <SideBarMenu />
           </div>
-        ) : null}
-        {/* end */}
+        ) :  null}
+        {/* end */} <h2>Licenses & Certificates</h2>
       </div>
-      <h2>Licenses & Certificates</h2>
     </>
   );
 };

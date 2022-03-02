@@ -10,6 +10,11 @@
       content="Web site created using create-react-app"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <link
@@ -22,68 +27,1350 @@
 
     <title>GenieVerse</title>
 
-
     <!-- UserProfile2 -->
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-    <meta name="theme-color" content="#000000"/>
-    <meta name="Description" content="Inst is a GraphQL based server side dashboard template"/>
-    <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAmCAMAAADgMgttAAAAvVBMVEUAAACAAID/gIBmM2b/ZmZ0RnT/XV2AR4D/VWOATnb1WGL2VV6AR3j4XGOASnr0WmB9S3nyWGCATHx+S3qATXnyWWPzWmOASnr0WmLyWWOATHvzWGKAS3v0WWKASnt+THrzWmJ+S3p+THrzWWPzWWN+S3vyWWN+THvzWmN+S3vzWmN/THvyWmJ/S3vzWmN+THvzWWN+THvyWWJ+S3vzWWJ+THryWmJ/THvyWWN/THvzWWJ+THrzWWJ/THvzWmMDCenuAAAAPXRSTlMAAgIFBQsLEhIaGhskJDAwPT1AS1BQWGBgZGhocHB4gICIkJCYoKCoqLCws7PBwc7O2trk5Ozs8/P5+fz8RRupggAAANJJREFUOMt10llbQWEAReFFOMjYQJSK0mw8OKbd//9ZXajnOfHtdfveLq6g9x2uRxyRHTvUEKpbh7qER4txntzUoQZQ3zvcNeDJoWZnFOYO1YemxV0Nnh1qkqGwcKh7uLa4qcCbQ42guHKoLrQsJiX4cKhPKK8dqg23FpcRjB3qFaprh/o/1BHGEdmpQw2hvnWoRmqoE5zlyc0dagDNvcPUUKeYGiqAevgbKoSbGrw41CRDceFQd4ehwpgchgrj71AG1YUbi0kJvhzqHc47XJgAfgCZbdkr/HyZpAAAAABJRU5ErkJggg==" type="image/png" sizes="16x16"/>
-    <style class="_styletron_hydrate_">.ae{width:100%}.af{display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex}.ag{-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column}.ah{min-height:100vh}.ai{background-color:#FFFFFF}.aj{z-index:2}.ak{display:block}.al{visibility:visible}.ao{padding-top:23px}.ap{max-width:1080px}.aq{padding-left:15px}.ar{padding-right:15px}.as{margin:0 auto}.at{position:relative}.au{z-index:1}.aw{-webkit-box-align:center;align-items:center}.ax{-webkit-box-pack:justify;justify-content:space-between}.ay{margin-bottom:15px}.az{display:-webkit-inline-box;display:-moz-inline-box;display:-ms-inline-flexbox;display:-webkit-inline-flex;display:inline-flex}.b0{cursor:pointer}.b1{display:-ms-grid;display:grid}.b2{grid-gap:30px}.b3{-ms-grid-columns:auto auto auto;grid-template-columns:auto auto auto}.b7{list-style:none}.b8{margin-right:20px}.bd:last-child{margin-right:0}.be{color:#545454}.bf{text-decoration:none}.bg{padding-top:10px}.bh{padding-bottom:10px}.bi{-webkit-transition:all 0.3s ease;-moz-transition:all 0.3s ease;transition:all 0.3s ease}.bj{font-family:system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif}.bk{font-size:14px}.bl{font-weight:normal}.bm{line-height:20px}.bt:hover{padding-top:10px}.bu:hover{padding-bottom:10px}.bv:hover{padding-left:15px}.bw:hover{padding-right:15px}.bx:hover{color:#000000}.by:hover{background-color:#EEEEEE}.c4{position:absolute}.c5{top:-8px}.c6{right:-14px}.c7{min-width:16px}.c8{min-height:14px}.c9{border-radius:50%}.ca{padding:2px}.cb{background-color:#000000}.cc{color:#FFFFFF}.cd{font-size:12px}.ce{line-height:14px}.cf{font-weight:700}.cg{-webkit-box-pack:center;justify-content:center}.ch{border-top-left-radius:50%}.ci{border-top-right-radius:50%}.cj{border-bottom-right-radius:50%}.ck{border-bottom-left-radius:50%}.cl{box-sizing:border-box}.cm{display:inline-block}.cn{height:40px}.co{width:40px}.cp{object-fit:cover}.cq{border-bottom:1px solid #EEEEEE}.cr{-webkit-transition:padding 0.25s ease;-moz-transition:padding 0.25s ease;transition:padding 0.25s ease}.cs{margin-right:25px}.ct{padding:16px 0}.cu{opacity:0}.cv{visibility:hidden}.cw{-ms-grid-columns:auto auto;grid-template-columns:auto auto}.cx{transform:translate3d(0 ,-20px, 0)}.cy{-webkit-transition:all 0.25s ease;-moz-transition:all 0.25s ease;transition:all 0.25s ease}.cz{display:none}.d2{padding:10px 6px 6px}.d3{-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-direction:row}.d4{-webkit-box-pack:start;justify-content:flex-start}.d5{border-left-width:0}.d6{border-top-width:0}.d7{border-right-width:0}.d8{border-bottom-width:0}.d9{border-left-style:none}.da{border-top-style:none}.db{border-right-style:none}.dc{border-bottom-style:none}.dd{outline:none}.de{outline-offset:-3px}.df{box-shadow:none}.dg{-webkit-appearance:none}.dh{-webkit-transition-property:background;-moz-transition-property:background;transition-property:background}.di{transition-duration:200ms}.dj{transition-timing-function:cubic-bezier(0, 0, 1, 1)}.dk:disabled{cursor:not-allowed}.dl:disabled{background-color:#F6F6F6}.dm:disabled{color:#AFAFAF}.dn{margin-left:0}.do{margin-top:0}.dp{margin-right:0}.dq{margin-bottom:0}.dr{font-size:22px}.ds{font-weight:500}.dt{line-height:16px}.du{border-top-right-radius:0px}.dv{border-bottom-right-radius:0px}.dw{border-top-left-radius:0px}.dx{border-bottom-left-radius:0px}.dy{padding-left:12px}.dz{padding-right:12px}.e0{color:#000000}.e1{background-color:transparent}.e2:hover{background-color:#FFFFFF}.e3:active{background-color:#EEEEEE}.e4{width:104px}.e5:focus{background-color:#FFFFFF}.e6{font-size:20px}.e7{font-weight:600}.e8{line-height:28px}.e9{text-transform:capitalize}.ea:hover{color:#333333}.eb{font-size:24px}.ec{flex:1 1 auto}.ed{overflow:hidden}.ee{padding-bottom:56px}.eh{margin:0}.ei{text-align:center}.ej{padding:27px 0 25px}.ek{border-top:1px solid #EEEEEE}.el{min-height:286px}.em{background-color:#F6F6F6}.en{-webkit-box-pack:end;justify-content:flex-end}.eo{padding:40px 0}.es{width:120px}.et{height:120px}.ey{-webkit-box-align:end;align-items:flex-end}.ez{margin-top:24px}.f0{margin-bottom:-4px}.f5{font-size:18px}.f6{line-height:24px}.f7{margin-bottom:6px}.fa{margin-left:24px}.fb{margin-right:24px}.fc:first-child{margin-left:0}.fd{padding:40px 0 0}.fe{margin:0 -15px}.fg{top:16px}.fh{right:16px}.fm{height:calc(100% - 3px)}.fn{top:0}.fo{left:0}.fp:hover{opacity:1}.fq:hover{background-color:rgba(255, 255, 255, 0.7)}.fr{margin:0 8px}.fu{padding-top:16px}.fv{padding-bottom:16px}.fw{padding-left:20px}.fx{padding-right:20px}.fy{background-color:#EEEEEE}.fz:hover{background-color:#E2E2E2}.g0:active{background-color:#CBCBCB}.g1{height:48px}</style>
-    <style class="_styletron_hydrate_" media="screen and (min-width: 320px)">.fs{padding-top:10px}</style>
-    <style class="_styletron_hydrate_" media="screen and (min-width: 600px)">.ft{padding-top:20px}</style><style class="_styletron_hydrate_" media="only screen and (min-width: 991px) and (max-width: 1135px)">.fi{font-family:system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif}.fj{font-size:16px}.fk{font-weight:normal}.fl{line-height:24px}</style><style class="_styletron_hydrate_" media="only screen and (max-width: 1135px)">.am{display:none}.an{visibility:hidden}.b4{width:100%}.b5{-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column}.b6{-webkit-box-align:start;align-items:flex-start}.b9{margin:0}.ba{padding-top:8px}.bb{padding-bottom:8px}.bc{border-bottom:1px solid #EEEEEE}.bn{padding-left:20px}.bo{padding-right:20px}.bp{font-family:system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif}.bq{font-size:16px}.br{font-weight:normal}.bs{line-height:24px}.bz:hover{padding-top:8px}.c0:hover{padding-bottom:8px}.c1:hover{padding-left:20px}.c2:hover{padding-right:20px}.c3:hover{background-color:#F6F6F6}.d0{display:block}.d1{visibility:visible}.ef{padding-bottom:40px}.ep{padding:32px 0}.eq{min-height:200px}.eu{width:96px}.ev{height:96px}.f8{margin-bottom:4px}.f9{margin-top:20px}</style><style class="_styletron_hydrate_" media="screen and (max-width: 1135px)">.av{max-width:920px}</style><style class="_styletron_hydrate_" media="only screen and (max-width: 767px)">.eg{padding-bottom:32px}</style><style class="_styletron_hydrate_" media="only screen and (max-width: 667px)">.er{text-align:center}.f1{-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column}.f2{-webkit-box-align:center;align-items:center}.f3{-webkit-box-pack:center;justify-content:center}.f4{margin-top:10px}</style><style class="_styletron_hydrate_" media="only screen and (max-width: 480px)">.ew{width:75px}.ex{height:75px}.ff{padding-top:24px}</style><meta name="viewport" content="width=device-width"/><meta charSet="utf-8"/><title>React</title><meta name="Description" content="Inst profile page"/><meta name="next-head-count" content="4"/><link rel="preload" href="_next/static/css/794ad5aba4560508dd8f.css" as="style"/><link rel="stylesheet" href="_next/static/css/794ad5aba4560508dd8f.css"/><link rel="preload" href="_next/static/chunks/main-d580e0675eacaca47ea2.js" as="script"/><link rel="preload" href="_next/static/chunks/webpack-0926b841a17067fcf2fe.js" as="script"/><link rel="preload" href="_next/static/chunks/framework.139b733b3ce774700d58.js" as="script"/><link rel="preload" href="_next/static/chunks/a46a52e6967fff46fb1302f7ecf15b86af99b532.cd2df1e720f45ed58e25.js" as="script"/><link rel="preload" href="_next/static/chunks/6ae64d9321aa8f00dd99f6ad4e0e8371ddd69307.73cb36e1fa55654f235f.js" as="script"/><link rel="preload" href="_next/static/chunks/931481e7340ad0860cfad1f27f5fc2e7848841e4.765e5ec4ab408d37a476.js" as="script"/><link rel="preload" href="_next/static/chunks/ad6cc8b26f21beaa770c18c9a2175fbe9a125980.820bd266aacfd25d35e2.js" as="script"/><link rel="preload" href="_next/static/chunks/1dd192e4e4992efa77337d3850233e6f381757bc.b07b1168f79877bef82d.js" as="script"/><link rel="preload" href="_next/static/chunks/23c11d7c9d18652dad0b7b97b6c984becfdefbba.0f8e7014b6cb85b50268.js" as="script"/><link rel="preload" href="_next/static/chunks/ee783512e27598fec937d045b2a925f995cf72eb.4df5d24c000e819493c5.js" as="script"/><link rel="preload" href="_next/static/chunks/72741fb2365feb64de57a4807ec7ef22ff89c405.278f382c09a04715bc77.js" as="script"/><link rel="preload" href="_next/static/chunks/9520c61cac793198e96f0146b6af9ef340598896.e7844db15e34387acabb.js" as="script"/><link rel="preload" href="_next/static/chunks/9a9a9cc83e1172bebe07fa94b6f34ad0a4e918ea.35e01813fc37b3029482.js" as="script"/><link rel="preload" href="_next/static/chunks/pages/_app-7ca6f26e059e60c97a0a.js" as="script"/><link rel="preload" href="_next/static/chunks/95b64a6e.c5cf105cdc228da190d7.js" as="script"/><link rel="preload" href="_next/static/chunks/0761e4fcc3f1bf3cfa460321f5386a3d91a398e9.9587a0538df52a0692df.js" as="script"/><link rel="preload" href="_next/static/chunks/5235977e17c0029d5d63105ee46ed28125976ac9.f0c5e1778f839d81d7ee.js" as="script"/><link rel="preload" href="_next/static/chunks/621fe44f2179f9cee6b32fac76d57e966d699e26.c2ee1a605eca065638a0.js" as="script"/><link rel="preload" href="_next/static/chunks/f5db56c834eb2556b41888c28cad0b3630ffdc13.72e996f048d56fdf5bcf.js" as="script"/><link rel="preload" href="_next/static/chunks/pages/profile-cfd42617d4f5937eb2d7.js" as="script"/>
-
-
-    
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="Description"
+      content="Inst is a GraphQL based server side dashboard template"
+    />
+    <link
+      rel="icon"
+      href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAmCAMAAADgMgttAAAAvVBMVEUAAACAAID/gIBmM2b/ZmZ0RnT/XV2AR4D/VWOATnb1WGL2VV6AR3j4XGOASnr0WmB9S3nyWGCATHx+S3qATXnyWWPzWmOASnr0WmLyWWOATHvzWGKAS3v0WWKASnt+THrzWmJ+S3p+THrzWWPzWWN+S3vyWWN+THvzWmN+S3vzWmN/THvyWmJ/S3vzWmN+THvzWWN+THvyWWJ+S3vzWWJ+THryWmJ/THvyWWN/THvzWWJ+THrzWWJ/THvzWmMDCenuAAAAPXRSTlMAAgIFBQsLEhIaGhskJDAwPT1AS1BQWGBgZGhocHB4gICIkJCYoKCoqLCws7PBwc7O2trk5Ozs8/P5+fz8RRupggAAANJJREFUOMt10llbQWEAReFFOMjYQJSK0mw8OKbd//9ZXajnOfHtdfveLq6g9x2uRxyRHTvUEKpbh7qER4txntzUoQZQ3zvcNeDJoWZnFOYO1YemxV0Nnh1qkqGwcKh7uLa4qcCbQ42guHKoLrQsJiX4cKhPKK8dqg23FpcRjB3qFaprh/o/1BHGEdmpQw2hvnWoRmqoE5zlyc0dagDNvcPUUKeYGiqAevgbKoSbGrw41CRDceFQd4ehwpgchgrj71AG1YUbi0kJvhzqHc47XJgAfgCZbdkr/HyZpAAAAABJRU5ErkJggg=="
+      type="image/png"
+      sizes="16x16"
+    />
+    <style class="_styletron_hydrate_">
+      .ae {
+        width: 100%;
+      }
+      .af {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+      }
+      .ag {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        flex-direction: column;
+      }
+      .ah {
+        min-height: 100vh;
+      }
+      .ai {
+        background-color: #ffffff;
+      }
+      .aj {
+        z-index: 2;
+      }
+      .ak {
+        display: block;
+      }
+      .al {
+        visibility: visible;
+      }
+      .ao {
+        padding-top: 23px;
+      }
+      .ap {
+        max-width: 1080px;
+      }
+      .aq {
+        padding-left: 15px;
+      }
+      .ar {
+        padding-right: 15px;
+      }
+      .as {
+        margin: 0 auto;
+      }
+      .at {
+        position: relative;
+      }
+      .au {
+        z-index: 1;
+      }
+      .aw {
+        -webkit-box-align: center;
+        align-items: center;
+      }
+      .ax {
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+      }
+      .ay {
+        margin-bottom: 15px;
+      }
+      .az {
+        display: -webkit-inline-box;
+        display: -moz-inline-box;
+        display: -ms-inline-flexbox;
+        display: -webkit-inline-flex;
+        display: inline-flex;
+      }
+      .b0 {
+        cursor: pointer;
+      }
+      .b1 {
+        display: -ms-grid;
+        display: grid;
+      }
+      .b2 {
+        grid-gap: 30px;
+      }
+      .b3 {
+        -ms-grid-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
+      }
+      .b7 {
+        list-style: none;
+      }
+      .b8 {
+        margin-right: 20px;
+      }
+      .bd:last-child {
+        margin-right: 0;
+      }
+      .be {
+        color: #545454;
+      }
+      .bf {
+        text-decoration: none;
+      }
+      .bg {
+        padding-top: 10px;
+      }
+      .bh {
+        padding-bottom: 10px;
+      }
+      .bi {
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+      }
+      .bj {
+        font-family: system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      }
+      .bk {
+        font-size: 14px;
+      }
+      .bl {
+        font-weight: normal;
+      }
+      .bm {
+        line-height: 20px;
+      }
+      .bt:hover {
+        padding-top: 10px;
+      }
+      .bu:hover {
+        padding-bottom: 10px;
+      }
+      .bv:hover {
+        padding-left: 15px;
+      }
+      .bw:hover {
+        padding-right: 15px;
+      }
+      .bx:hover {
+        color: #000000;
+      }
+      .by:hover {
+        background-color: #eeeeee;
+      }
+      .c4 {
+        position: absolute;
+      }
+      .c5 {
+        top: -8px;
+      }
+      .c6 {
+        right: -14px;
+      }
+      .c7 {
+        min-width: 16px;
+      }
+      .c8 {
+        min-height: 14px;
+      }
+      .c9 {
+        border-radius: 50%;
+      }
+      .ca {
+        padding: 2px;
+      }
+      .cb {
+        background-color: #000000;
+      }
+      .cc {
+        color: #ffffff;
+      }
+      .cd {
+        font-size: 12px;
+      }
+      .ce {
+        line-height: 14px;
+      }
+      .cf {
+        font-weight: 700;
+      }
+      .cg {
+        -webkit-box-pack: center;
+        justify-content: center;
+      }
+      .ch {
+        border-top-left-radius: 50%;
+      }
+      .ci {
+        border-top-right-radius: 50%;
+      }
+      .cj {
+        border-bottom-right-radius: 50%;
+      }
+      .ck {
+        border-bottom-left-radius: 50%;
+      }
+      .cl {
+        box-sizing: border-box;
+      }
+      .cm {
+        display: inline-block;
+      }
+      .cn {
+        height: 40px;
+      }
+      .co {
+        width: 40px;
+      }
+      .cp {
+        object-fit: cover;
+      }
+      .cq {
+        border-bottom: 1px solid #eeeeee;
+      }
+      .cr {
+        -webkit-transition: padding 0.25s ease;
+        -moz-transition: padding 0.25s ease;
+        transition: padding 0.25s ease;
+      }
+      .cs {
+        margin-right: 25px;
+      }
+      .ct {
+        padding: 16px 0;
+      }
+      .cu {
+        opacity: 0;
+      }
+      .cv {
+        visibility: hidden;
+      }
+      .cw {
+        -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+      }
+      .cx {
+        transform: translate3d(0, -20px, 0);
+      }
+      .cy {
+        -webkit-transition: all 0.25s ease;
+        -moz-transition: all 0.25s ease;
+        transition: all 0.25s ease;
+      }
+      .cz {
+        display: none;
+      }
+      .d2 {
+        padding: 10px 6px 6px;
+      }
+      .d3 {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        flex-direction: row;
+      }
+      .d4 {
+        -webkit-box-pack: start;
+        justify-content: flex-start;
+      }
+      .d5 {
+        border-left-width: 0;
+      }
+      .d6 {
+        border-top-width: 0;
+      }
+      .d7 {
+        border-right-width: 0;
+      }
+      .d8 {
+        border-bottom-width: 0;
+      }
+      .d9 {
+        border-left-style: none;
+      }
+      .da {
+        border-top-style: none;
+      }
+      .db {
+        border-right-style: none;
+      }
+      .dc {
+        border-bottom-style: none;
+      }
+      .dd {
+        outline: none;
+      }
+      .de {
+        outline-offset: -3px;
+      }
+      .df {
+        box-shadow: none;
+      }
+      .dg {
+        -webkit-appearance: none;
+      }
+      .dh {
+        -webkit-transition-property: background;
+        -moz-transition-property: background;
+        transition-property: background;
+      }
+      .di {
+        transition-duration: 200ms;
+      }
+      .dj {
+        transition-timing-function: cubic-bezier(0, 0, 1, 1);
+      }
+      .dk:disabled {
+        cursor: not-allowed;
+      }
+      .dl:disabled {
+        background-color: #f6f6f6;
+      }
+      .dm:disabled {
+        color: #afafaf;
+      }
+      .dn {
+        margin-left: 0;
+      }
+      .do {
+        margin-top: 0;
+      }
+      .dp {
+        margin-right: 0;
+      }
+      .dq {
+        margin-bottom: 0;
+      }
+      .dr {
+        font-size: 22px;
+      }
+      .ds {
+        font-weight: 500;
+      }
+      .dt {
+        line-height: 16px;
+      }
+      .du {
+        border-top-right-radius: 0px;
+      }
+      .dv {
+        border-bottom-right-radius: 0px;
+      }
+      .dw {
+        border-top-left-radius: 0px;
+      }
+      .dx {
+        border-bottom-left-radius: 0px;
+      }
+      .dy {
+        padding-left: 12px;
+      }
+      .dz {
+        padding-right: 12px;
+      }
+      .e0 {
+        color: #000000;
+      }
+      .e1 {
+        background-color: transparent;
+      }
+      .e2:hover {
+        background-color: #ffffff;
+      }
+      .e3:active {
+        background-color: #eeeeee;
+      }
+      .e4 {
+        width: 104px;
+      }
+      .e5:focus {
+        background-color: #ffffff;
+      }
+      .e6 {
+        font-size: 20px;
+      }
+      .e7 {
+        font-weight: 600;
+      }
+      .e8 {
+        line-height: 28px;
+      }
+      .e9 {
+        text-transform: capitalize;
+      }
+      .ea:hover {
+        color: #333333;
+      }
+      .eb {
+        font-size: 24px;
+      }
+      .ec {
+        flex: 1 1 auto;
+      }
+      .ed {
+        overflow: hidden;
+      }
+      .ee {
+        padding-bottom: 56px;
+      }
+      .eh {
+        margin: 0;
+      }
+      .ei {
+        text-align: center;
+      }
+      .ej {
+        padding: 27px 0 25px;
+      }
+      .ek {
+        border-top: 1px solid #eeeeee;
+      }
+      .el {
+        min-height: 286px;
+      }
+      .em {
+        background-color: #f6f6f6;
+      }
+      .en {
+        -webkit-box-pack: end;
+        justify-content: flex-end;
+      }
+      .eo {
+        padding: 40px 0;
+      }
+      .es {
+        width: 120px;
+      }
+      .et {
+        height: 120px;
+      }
+      .ey {
+        -webkit-box-align: end;
+        align-items: flex-end;
+      }
+      .ez {
+        margin-top: 24px;
+      }
+      .f0 {
+        margin-bottom: -4px;
+      }
+      .f5 {
+        font-size: 18px;
+      }
+      .f6 {
+        line-height: 24px;
+      }
+      .f7 {
+        margin-bottom: 6px;
+      }
+      .fa {
+        margin-left: 24px;
+      }
+      .fb {
+        margin-right: 24px;
+      }
+      .fc:first-child {
+        margin-left: 0;
+      }
+      .fd {
+        padding: 40px 0 0;
+      }
+      .fe {
+        margin: 0 -15px;
+      }
+      .fg {
+        top: 16px;
+      }
+      .fh {
+        right: 16px;
+      }
+      .fm {
+        height: calc(100% - 3px);
+      }
+      .fn {
+        top: 0;
+      }
+      .fo {
+        left: 0;
+      }
+      .fp:hover {
+        opacity: 1;
+      }
+      .fq:hover {
+        background-color: rgba(255, 255, 255, 0.7);
+      }
+      .fr {
+        margin: 0 8px;
+      }
+      .fu {
+        padding-top: 16px;
+      }
+      .fv {
+        padding-bottom: 16px;
+      }
+      .fw {
+        padding-left: 20px;
+      }
+      .fx {
+        padding-right: 20px;
+      }
+      .fy {
+        background-color: #eeeeee;
+      }
+      .fz:hover {
+        background-color: #e2e2e2;
+      }
+      .g0:active {
+        background-color: #cbcbcb;
+      }
+      .g1 {
+        height: 48px;
+      }
+    </style>
+    <style class="_styletron_hydrate_" media="screen and (min-width: 320px)">
+      .fs {
+        padding-top: 10px;
+      }
+    </style>
+    <style class="_styletron_hydrate_" media="screen and (min-width: 600px)">
+      .ft {
+        padding-top: 20px;
+      }
+    </style>
+    <style
+      class="_styletron_hydrate_"
+      media="only screen and (min-width: 991px) and (max-width: 1135px)"
+    >
+      .fi {
+        font-family: system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      }
+      .fj {
+        font-size: 16px;
+      }
+      .fk {
+        font-weight: normal;
+      }
+      .fl {
+        line-height: 24px;
+      }
+    </style>
+    <style
+      class="_styletron_hydrate_"
+      media="only screen and (max-width: 1135px)"
+    >
+      .am {
+        display: none;
+      }
+      .an {
+        visibility: hidden;
+      }
+      .b4 {
+        width: 100%;
+      }
+      .b5 {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        flex-direction: column;
+      }
+      .b6 {
+        -webkit-box-align: start;
+        align-items: flex-start;
+      }
+      .b9 {
+        margin: 0;
+      }
+      .ba {
+        padding-top: 8px;
+      }
+      .bb {
+        padding-bottom: 8px;
+      }
+      .bc {
+        border-bottom: 1px solid #eeeeee;
+      }
+      .bn {
+        padding-left: 20px;
+      }
+      .bo {
+        padding-right: 20px;
+      }
+      .bp {
+        font-family: system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      }
+      .bq {
+        font-size: 16px;
+      }
+      .br {
+        font-weight: normal;
+      }
+      .bs {
+        line-height: 24px;
+      }
+      .bz:hover {
+        padding-top: 8px;
+      }
+      .c0:hover {
+        padding-bottom: 8px;
+      }
+      .c1:hover {
+        padding-left: 20px;
+      }
+      .c2:hover {
+        padding-right: 20px;
+      }
+      .c3:hover {
+        background-color: #f6f6f6;
+      }
+      .d0 {
+        display: block;
+      }
+      .d1 {
+        visibility: visible;
+      }
+      .ef {
+        padding-bottom: 40px;
+      }
+      .ep {
+        padding: 32px 0;
+      }
+      .eq {
+        min-height: 200px;
+      }
+      .eu {
+        width: 96px;
+      }
+      .ev {
+        height: 96px;
+      }
+      .f8 {
+        margin-bottom: 4px;
+      }
+      .f9 {
+        margin-top: 20px;
+      }
+    </style>
+    <style class="_styletron_hydrate_" media="screen and (max-width: 1135px)">
+      .av {
+        max-width: 920px;
+      }
+    </style>
+    <style
+      class="_styletron_hydrate_"
+      media="only screen and (max-width: 767px)"
+    >
+      .eg {
+        padding-bottom: 32px;
+      }
+    </style>
+    <style
+      class="_styletron_hydrate_"
+      media="only screen and (max-width: 667px)"
+    >
+      .er {
+        text-align: center;
+      }
+      .f1 {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        flex-direction: column;
+      }
+      .f2 {
+        -webkit-box-align: center;
+        align-items: center;
+      }
+      .f3 {
+        -webkit-box-pack: center;
+        justify-content: center;
+      }
+      .f4 {
+        margin-top: 10px;
+      }
+    </style>
+    <style
+      class="_styletron_hydrate_"
+      media="only screen and (max-width: 480px)"
+    >
+      .ew {
+        width: 75px;
+      }
+      .ex {
+        height: 75px;
+      }
+      .ff {
+        padding-top: 24px;
+      }
+    </style>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8" />
+    <title>React</title>
+    <meta name="Description" content="Inst profile page" />
+    <meta name="next-head-count" content="4" />
+    <link
+      rel="preload"
+      href="_next/static/css/794ad5aba4560508dd8f.css"
+      as="style"
+    />
+    <link rel="stylesheet" href="_next/static/css/794ad5aba4560508dd8f.css" />
+    <link
+      rel="preload"
+      href="_next/static/chunks/main-d580e0675eacaca47ea2.js"
+      as="script"
+    />
+    <link
+      rel="preload"
+      href="_next/static/chunks/webpack-0926b841a17067fcf2fe.js"
+      as="script"
+    />
+    <link
+      rel="preload"
+      href="_next/static/chunks/framework.139b733b3ce774700d58.js"
+      as="script"
+    />
+    <link
+      rel="preload"
+      href="_next/static/chunks/a46a52e6967fff46fb1302f7ecf15b86af99b532.cd2df1e720f45ed58e25.js"
+      as="script"
+    />
+    <link
+      rel="preload"
+      href="_next/static/chunks/6ae64d9321aa8f00dd99f6ad4e0e8371ddd69307.73cb36e1fa55654f235f.js"
+      as="script"
+    />
+    <link
+      rel="preload"
+      href="_next/static/chunks/931481e7340ad0860cfad1f27f5fc2e7848841e4.765e5ec4ab408d37a476.js"
+      as="script"
+    />
+    <link
+      rel="preload"
+      href="_next/static/chunks/ad6cc8b26f21beaa770c18c9a2175fbe9a125980.820bd266aacfd25d35e2.js"
+      as="script"
+    />
+    <link
+      rel="preload"
+      href="_next/static/chunks/1dd192e4e4992efa77337d3850233e6f381757bc.b07b1168f79877bef82d.js"
+      as="script"
+    />
+    <link
+      rel="preload"
+      href="_next/static/chunks/23c11d7c9d18652dad0b7b97b6c984becfdefbba.0f8e7014b6cb85b50268.js"
+      as="script"
+    />
+    <link
+      rel="preload"
+      href="_next/static/chunks/ee783512e27598fec937d045b2a925f995cf72eb.4df5d24c000e819493c5.js"
+      as="script"
+    />
+    <link
+      rel="preload"
+      href="_next/static/chunks/72741fb2365feb64de57a4807ec7ef22ff89c405.278f382c09a04715bc77.js"
+      as="script"
+    />
+    <link
+      rel="preload"
+      href="_next/static/chunks/9520c61cac793198e96f0146b6af9ef340598896.e7844db15e34387acabb.js"
+      as="script"
+    />
+    <link
+      rel="preload"
+      href="_next/static/chunks/9a9a9cc83e1172bebe07fa94b6f34ad0a4e918ea.35e01813fc37b3029482.js"
+      as="script"
+    />
+    <link
+      rel="preload"
+      href="_next/static/chunks/pages/_app-7ca6f26e059e60c97a0a.js"
+      as="script"
+    />
+    <link
+      rel="preload"
+      href="_next/static/chunks/95b64a6e.c5cf105cdc228da190d7.js"
+      as="script"
+    />
+    <link
+      rel="preload"
+      href="_next/static/chunks/0761e4fcc3f1bf3cfa460321f5386a3d91a398e9.9587a0538df52a0692df.js"
+      as="script"
+    />
+    <link
+      rel="preload"
+      href="_next/static/chunks/5235977e17c0029d5d63105ee46ed28125976ac9.f0c5e1778f839d81d7ee.js"
+      as="script"
+    />
+    <link
+      rel="preload"
+      href="_next/static/chunks/621fe44f2179f9cee6b32fac76d57e966d699e26.c2ee1a605eca065638a0.js"
+      as="script"
+    />
+    <link
+      rel="preload"
+      href="_next/static/chunks/f5db56c834eb2556b41888c28cad0b3630ffdc13.72e996f048d56fdf5bcf.js"
+      as="script"
+    />
+    <link
+      rel="preload"
+      href="_next/static/chunks/pages/profile-cfd42617d4f5937eb2d7.js"
+      as="script"
+    />
   </head>
 
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
 
-
-
     <!-- UserProfile2 -->
-    <script id="__NEXT_DATA__"
-    type="application/json">{"props":{"pageProps":{"apolloState":{"Comment:1":{"id":"1","__typename":"Comment","role":"author","username":"@lucinda_kerr","avatar":"https://randomuser.me/api/portraits/men/99.jpg","comment":"Hi 👋🏻😊\u003cbr /\u003e These are my personal favorites of my last year's render challenge. And maybe that's also a reason to try this new instagram feature... 😜\u003cbr /\u003e \u003ca class=\"\" href=\"#\"\u003e#lekoarts\u003c/a\u003e \u003ca class=\"\" href=\"#\"\u003e#arsaurea\u003c/a\u003e \u003ca class=\"\" href=\"#\"\u003e#photoshop\u003c/a\u003e \u003ca class=\"\" href=\"#\"\u003e#cinema4d\u003c/a\u003e \u003ca class=\"\" href=\"#\"\u003e#c4d\u003c/a\u003e \u003ca class=\"\" href=\"#\"\u003e#graphicdesign\u003c/a\u003e \u003ca class=\"\" href=\"#\"\u003e#artwork\u003c/a\u003e \u003ca class=\"\" href=\"#\"\u003e#digitalart\u003c/a\u003e \u003ca class=\"\" href=\"#\"\u003e#artoftheday\u003c/a\u003e \u003ca class=\"\" href=\"#\"\u003e#abstract\u003c/a\u003e","createdAt":"2022-02-19T14:11:36.943Z"},"Comment:2":{"id":"2","__typename":"Comment","role":"user","username":"@jon_doe","avatar":"https://randomuser.me/api/portraits/men/64.jpg","comment":"Hey. This is so dope","createdAt":"2022-02-19T14:11:36.943Z"},"Post:1":{"id":"1","__typename":"Post","type":"image","image":"https://s3.amazonaws.com/redqteam.com/inst/post/1.jpg","video":null,"gallery":null,"comments":[{"__ref":"Comment:1"},{"__ref":"Comment:2"}]},"Comment:3":{"id":"3","__typename":"Comment","role":"user","username":"@jenny_doe","avatar":"https://randomuser.me/api/portraits/women/68.jpg","comment":"wow!! 👌👌😍😍","createdAt":"2022-02-19T14:11:36.943Z"},"Post:2":{"id":"2","__typename":"Post","type":"gallery","image":"https://s3.amazonaws.com/redqteam.com/inst/post/2.jpg","video":null,"gallery":["https://s3.amazonaws.com/redqteam.com/inst/post/2.jpg","../s3.amazonaws.com/redqteam.com/inst/post/11.jpg","https://s3.amazonaws.com/redqteam.com/inst/post/6.jpg"],"comments":[{"__ref":"Comment:1"},{"__ref":"Comment:2"},{"__ref":"Comment:3"}]},"Post:3":{"id":"3","__typename":"Post","type":"video","image":"https://s3.amazonaws.com/redqteam.com/inst/post/9.jpg","video":"\u003ciframe src=\"https://player.vimeo.com/video/359281775?color=d4d4d4\u0026title=0\u0026byline=0\u0026portrait=0\u0026badge=0\" width=\"640\" height=\"360\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen\u003e\u003c/iframe\u003e","gallery":null,"comments":[{"__ref":"Comment:1"},{"__ref":"Comment:2"}]},"Post:4":{"id":"4","__typename":"Post","type":"image","image":"https://s3.amazonaws.com/redqteam.com/inst/post/3.jpg","video":null,"gallery":null,"comments":[{"__ref":"Comment:1"},{"__ref":"Comment:2"}]},"Post:5":{"id":"5","__typename":"Post","type":"image","image":"https://s3.amazonaws.com/redqteam.com/inst/post/4.jpg","video":null,"gallery":null,"comments":[{"__ref":"Comment:1"},{"__ref":"Comment:2"},{"__ref":"Comment:3"}]},"Post:6":{"id":"6","__typename":"Post","type":"image","image":"https://s3.amazonaws.com/redqteam.com/inst/post/5.jpg","video":null,"gallery":null,"comments":[{"__ref":"Comment:1"},{"__ref":"Comment:2"}]},"Post:7":{"id":"7","__typename":"Post","type":"gallery","image":"https://s3.amazonaws.com/redqteam.com/inst/post/7.jpg","video":null,"gallery":["https://s3.amazonaws.com/redqteam.com/inst/post/7.jpg","../s3.amazonaws.com/redqteam.com/inst/post/25.jpg","https://s3.amazonaws.com/redqteam.com/inst/post/9.jpg"],"comments":[{"__ref":"Comment:1"},{"__ref":"Comment:2"},{"__ref":"Comment:3"}]},"Post:8":{"id":"8","__typename":"Post","type":"video","image":"https://s3.amazonaws.com/redqteam.com/inst/post/8.jpg","video":"\u003ciframe src=\"https://player.vimeo.com/video/35396305?color=d4d4d4\u0026title=0\u0026byline=0\u0026portrait=0\u0026badge=0\" width=\"640\" height=\"360\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen\u003e\u003c/iframe\u003e","gallery":null,"comments":[{"__ref":"Comment:1"},{"__ref":"Comment:2"}]},"Post:9":{"id":"9","__typename":"Post","type":"image","image":"https://s3.amazonaws.com/redqteam.com/inst/post/9.jpg","video":null,"gallery":null,"comments":[{"__ref":"Comment:1"},{"__ref":"Comment:2"}]},"Post:10":{"id":"10","__typename":"Post","type":"image","image":"https://s3.amazonaws.com/redqteam.com/inst/post/10.jpg","video":null,"gallery":null,"comments":[{"__ref":"Comment:1"},{"__ref":"Comment:2"}]},"Post:11":{"id":"11","__typename":"Post","type":"gallery","image":"https://s3.amazonaws.com/redqteam.com/inst/post/11.jpg","video":null,"gallery":["https://s3.amazonaws.com/redqteam.com/inst/post/11.jpg","../s3.amazonaws.com/redqteam.com/inst/post/12.jpg","https://s3.amazonaws.com/redqteam.com/inst/post/26.jpg"],"comments":[{"__ref":"Comment:1"},{"__ref":"Comment:2"},{"__ref":"Comment:3"}]},"Post:12":{"id":"12","__typename":"Post","type":"video","image":"https://s3.amazonaws.com/redqteam.com/inst/post/12.jpg","video":"\u003ciframe src=\"https://player.vimeo.com/video/359281775?color=d4d4d4\u0026title=0\u0026byline=0\u0026portrait=0\u0026badge=0\" width=\"640\" height=\"360\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen\u003e\u003c/iframe\u003e","gallery":null,"comments":[{"__ref":"Comment:1"},{"__ref":"Comment:2"}]},"Post:13":{"id":"13","__typename":"Post","type":"video","image":"https://s3.amazonaws.com/redqteam.com/inst/post/13.jpg","video":"\u003ciframe src=\"https://player.vimeo.com/video/35396305?color=d4d4d4\u0026title=0\u0026byline=0\u0026portrait=0\u0026badge=0\" width=\"640\" height=\"360\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen\u003e\u003c/iframe\u003e","gallery":null,"comments":[{"__ref":"Comment:1"},{"__ref":"Comment:2"}]},"Post:14":{"id":"14","__typename":"Post","type":"image","image":"https://s3.amazonaws.com/redqteam.com/inst/post/14.jpg","video":null,"gallery":null,"comments":[{"__ref":"Comment:1"},{"__ref":"Comment:2"}]},"Post:15":{"id":"15","__typename":"Post","type":"image","image":"https://s3.amazonaws.com/redqteam.com/inst/post/15.jpg","video":null,"gallery":null,"comments":[{"__ref":"Comment:1"},{"__ref":"Comment:2"}]},"Post:16":{"id":"16","__typename":"Post","type":"video","image":"https://s3.amazonaws.com/redqteam.com/inst/post/16.jpg","video":"\u003ciframe src=\"https://player.vimeo.com/video/359281775?color=d4d4d4\u0026title=0\u0026byline=0\u0026portrait=0\u0026badge=0\" width=\"640\" height=\"360\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen\u003e\u003c/iframe\u003e","gallery":null,"comments":[{"__ref":"Comment:1"},{"__ref":"Comment:2"}]},"Post:17":{"id":"17","__typename":"Post","type":"image","image":"https://s3.amazonaws.com/redqteam.com/inst/post/17.jpg","video":null,"gallery":null,"comments":[{"__ref":"Comment:1"},{"__ref":"Comment:2"}]},"Post:18":{"id":"18","__typename":"Post","type":"image","image":"https://s3.amazonaws.com/redqteam.com/inst/post/18.jpg","video":null,"gallery":null,"comments":[{"__ref":"Comment:1"},{"__ref":"Comment:2"},{"__ref":"Comment:3"}]},"Post:19":{"id":"19","__typename":"Post","type":"image","image":"https://s3.amazonaws.com/redqteam.com/inst/post/19.jpg","video":null,"gallery":null,"comments":[{"__ref":"Comment:1"},{"__ref":"Comment:2"}]},"Post:20":{"id":"20","__typename":"Post","type":"gallery","image":"https://s3.amazonaws.com/redqteam.com/inst/post/20.jpg","video":null,"gallery":["https://s3.amazonaws.com/redqteam.com/inst/post/7.jpg","../s3.amazonaws.com/redqteam.com/inst/post/5.jpg","https://s3.amazonaws.com/redqteam.com/inst/post/9.jpg"],"comments":[{"__ref":"Comment:1"},{"__ref":"Comment:2"},{"__ref":"Comment:3"}]},"Post:21":{"id":"21","__typename":"Post","type":"gallery","image":"https://s3.amazonaws.com/redqteam.com/inst/post/21.jpg","video":null,"gallery":["https://s3.amazonaws.com/redqteam.com/inst/post/7.jpg","../s3.amazonaws.com/redqteam.com/inst/post/5.jpg","https://s3.amazonaws.com/redqteam.com/inst/post/9.jpg"],"comments":[{"__ref":"Comment:1"},{"__ref":"Comment:2"},{"__ref":"Comment:3"}]},"Post:22":{"id":"22","__typename":"Post","type":"video","image":"https://s3.amazonaws.com/redqteam.com/inst/post/22.jpg","video":"\u003ciframe src=\"https://player.vimeo.com/video/35396305?color=d4d4d4\u0026title=0\u0026byline=0\u0026portrait=0\u0026badge=0\" width=\"640\" height=\"360\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen\u003e\u003c/iframe\u003e","gallery":null,"comments":[{"__ref":"Comment:1"},{"__ref":"Comment:2"}]},"Post:23":{"id":"23","__typename":"Post","type":"image","image":"https://s3.amazonaws.com/redqteam.com/inst/post/23.jpg","video":null,"gallery":null,"comments":[{"__ref":"Comment:1"},{"__ref":"Comment:2"}]},"Post:24":{"id":"24","__typename":"Post","type":"image","image":"https://s3.amazonaws.com/redqteam.com/inst/post/24.jpg","video":null,"gallery":null,"comments":[{"__ref":"Comment:1"},{"__ref":"Comment:2"}]},"User:1":{"id":"1","__typename":"User","avatar":"https://randomuser.me/api/portraits/men/32.jpg","name":"Leo Gill"},"User:2":{"id":"2","__typename":"User","avatar":"https://randomuser.me/api/portraits/women/44.jpg","name":"June Cha"},"User:3":{"id":"3","__typename":"User","avatar":"https://randomuser.me/api/portraits/women/65.jpg","name":"Renee Sims"},"User:4":{"id":"4","__typename":"User","avatar":"https://randomuser.me/api/portraits/men/43.jpg","name":"Jonathan Cha"},"User:5":{"id":"5","__typename":"User","avatar":"https://tinyfac.es/data/avatars/B0298C36-9751-48EF-BE15-80FB9CD11143-500w.jpeg","name":"Thomas Stock"},"User:6":{"id":"6","__typename":"User","avatar":"https://randomuser.me/api/portraits/men/97.jpg","name":"Veeti Seppanen"},"User:7":{"id":"7","__typename":"User","avatar":"https://randomuser.me/api/portraits/women/26.jpg","name":"Bonnie Riley"},"User:8":{"id":"8","__typename":"User","avatar":"https://tinyfac.es/data/avatars/7D3FA6C0-83C8-4834-B432-6C65ED4FD4C3-500w.jpeg","name":"Steve T. Scaife"},"User:9":{"id":"9","__typename":"User","avatar":"https://randomuser.me/api/portraits/men/97.jpg","name":"Veeti Seppanen"},"User:10":{"id":"10","__typename":"User","avatar":"https://randomuser.me/api/portraits/women/26.jpg","name":"Bonnie Riley"},"User:11":{"id":"11","__typename":"User","avatar":"https://tinyfac.es/data/avatars/7D3FA6C0-83C8-4834-B432-6C65ED4FD4C3-500w.jpeg","name":"Steve T. Scaife"},"User:12":{"id":"12","__typename":"User","avatar":"https://randomuser.me/api/portraits/men/32.jpg","name":"Leo Gill"},"Profile:user_1":{"id":"user_1","__typename":"Profile","name":"Lucinda Kerr","role":"Art \u0026 Social Activist","avatar":"https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-0.3.5\u0026q=80\u0026fm=jpg\u0026crop=entropy\u0026cs=tinysrgb\u0026w=200\u0026fit=max\u0026s=707b9c33066bf8808c934c8ab394dff6","posts":[{"__ref":"Post:1"},{"__ref":"Post:2"},{"__ref":"Post:3"},{"__ref":"Post:4"},{"__ref":"Post:5"},{"__ref":"Post:6"},{"__ref":"Post:7"},{"__ref":"Post:8"},{"__ref":"Post:9"},{"__ref":"Post:10"},{"__ref":"Post:11"},{"__ref":"Post:12"},{"__ref":"Post:13"},{"__ref":"Post:14"},{"__ref":"Post:15"},{"__ref":"Post:16"},{"__ref":"Post:17"},{"__ref":"Post:18"},{"__ref":"Post:19"},{"__ref":"Post:20"},{"__ref":"Post:21"},{"__ref":"Post:22"},{"__ref":"Post:23"},{"__ref":"Post:24"}],"followers":[{"__ref":"User:1"},{"__ref":"User:2"},{"__ref":"User:3"},{"__ref":"User:4"},{"__ref":"User:5"},{"__ref":"User:6"},{"__ref":"User:7"},{"__ref":"User:8"},{"__ref":"User:9"},{"__ref":"User:10"},{"__ref":"User:11"},{"__ref":"User:12"}],"following":[{"__ref":"User:1"},{"__ref":"User:2"},{"__ref":"User:3"},{"__ref":"User:4"},{"__ref":"User:5"},{"__ref":"User:6"},{"__ref":"User:7"},{"__ref":"User:8"}]},"ROOT_QUERY":{"__typename":"Query","profile({\"id\":\"user_1\"})":{"__ref":"Profile:user_1"}}}}},"page":"/profile","query":{},"buildId":"DIKB7D5g-Hd4jM1rQ6PWJ","runtimeConfig":{},"nextExport":false,"isFallback":false,"gip":true}</script>
-<script nomodule="" src="_next/static/chunks/polyfills-ec956c52ea1cab5bfe8f.js"></script>
-<script src="_next/static/chunks/main-d580e0675eacaca47ea2.js" async=""></script>
-<script src="_next/static/chunks/webpack-0926b841a17067fcf2fe.js" async=""></script>
-<script src="_next/static/chunks/framework.139b733b3ce774700d58.js" async=""></script>
-<script src="_next/static/chunks/a46a52e6967fff46fb1302f7ecf15b86af99b532.cd2df1e720f45ed58e25.js"
-    async=""></script>
-<script src="_next/static/chunks/6ae64d9321aa8f00dd99f6ad4e0e8371ddd69307.73cb36e1fa55654f235f.js"
-    async=""></script>
-<script src="_next/static/chunks/931481e7340ad0860cfad1f27f5fc2e7848841e4.765e5ec4ab408d37a476.js"
-    async=""></script>
-<script src="_next/static/chunks/ad6cc8b26f21beaa770c18c9a2175fbe9a125980.820bd266aacfd25d35e2.js"
-    async=""></script>
-<script src="_next/static/chunks/1dd192e4e4992efa77337d3850233e6f381757bc.b07b1168f79877bef82d.js"
-    async=""></script>
-<script src="_next/static/chunks/23c11d7c9d18652dad0b7b97b6c984becfdefbba.0f8e7014b6cb85b50268.js"
-    async=""></script>
-<script src="_next/static/chunks/ee783512e27598fec937d045b2a925f995cf72eb.4df5d24c000e819493c5.js"
-    async=""></script>
-<script src="_next/static/chunks/72741fb2365feb64de57a4807ec7ef22ff89c405.278f382c09a04715bc77.js"
-    async=""></script>
-<script src="_next/static/chunks/9520c61cac793198e96f0146b6af9ef340598896.e7844db15e34387acabb.js"
-    async=""></script>
-<script src="_next/static/chunks/9a9a9cc83e1172bebe07fa94b6f34ad0a4e918ea.35e01813fc37b3029482.js"
-    async=""></script>
-<script src="_next/static/chunks/pages/_app-7ca6f26e059e60c97a0a.js" async=""></script>
-<script src="_next/static/chunks/95b64a6e.c5cf105cdc228da190d7.js" async=""></script>
-<script src="_next/static/chunks/0761e4fcc3f1bf3cfa460321f5386a3d91a398e9.9587a0538df52a0692df.js"
-    async=""></script>
-<script src="_next/static/chunks/5235977e17c0029d5d63105ee46ed28125976ac9.f0c5e1778f839d81d7ee.js"
-    async=""></script>
-<script src="_next/static/chunks/621fe44f2179f9cee6b32fac76d57e966d699e26.c2ee1a605eca065638a0.js"
-    async=""></script>
-<script src="_next/static/chunks/f5db56c834eb2556b41888c28cad0b3630ffdc13.72e996f048d56fdf5bcf.js"
-    async=""></script>
-<script src="_next/static/chunks/pages/profile-cfd42617d4f5937eb2d7.js" async=""></script>
-<script src="_next/static/DIKB7D5g-Hd4jM1rQ6PWJ/_buildManifest.js" async=""></script>
-<script src="_next/static/DIKB7D5g-Hd4jM1rQ6PWJ/_ssgManifest.js" async=""></script>
-
-
-
+    <script id="__NEXT_DATA__" type="application/json">
+      {
+        "props": {
+          "pageProps": {
+            "apolloState": {
+              "Comment:1": {
+                "id": "1",
+                "__typename": "Comment",
+                "role": "author",
+                "username": "@lucinda_kerr",
+                "avatar": "https://randomuser.me/api/portraits/men/99.jpg",
+                "comment": "Hi 👋🏻😊\u003cbr /\u003e These are my personal favorites of my last year's render challenge. And maybe that's also a reason to try this new instagram feature... 😜\u003cbr /\u003e \u003ca class=\"\" href=\"#\"\u003e#lekoarts\u003c/a\u003e \u003ca class=\"\" href=\"#\"\u003e#arsaurea\u003c/a\u003e \u003ca class=\"\" href=\"#\"\u003e#photoshop\u003c/a\u003e \u003ca class=\"\" href=\"#\"\u003e#cinema4d\u003c/a\u003e \u003ca class=\"\" href=\"#\"\u003e#c4d\u003c/a\u003e \u003ca class=\"\" href=\"#\"\u003e#graphicdesign\u003c/a\u003e \u003ca class=\"\" href=\"#\"\u003e#artwork\u003c/a\u003e \u003ca class=\"\" href=\"#\"\u003e#digitalart\u003c/a\u003e \u003ca class=\"\" href=\"#\"\u003e#artoftheday\u003c/a\u003e \u003ca class=\"\" href=\"#\"\u003e#abstract\u003c/a\u003e",
+                "createdAt": "2022-02-19T14:11:36.943Z"
+              },
+              "Comment:2": {
+                "id": "2",
+                "__typename": "Comment",
+                "role": "user",
+                "username": "@jon_doe",
+                "avatar": "https://randomuser.me/api/portraits/men/64.jpg",
+                "comment": "Hey. This is so dope",
+                "createdAt": "2022-02-19T14:11:36.943Z"
+              },
+              "Post:1": {
+                "id": "1",
+                "__typename": "Post",
+                "type": "image",
+                "image": "https://s3.amazonaws.com/redqteam.com/inst/post/1.jpg",
+                "video": null,
+                "gallery": null,
+                "comments": [{ "__ref": "Comment:1" }, { "__ref": "Comment:2" }]
+              },
+              "Comment:3": {
+                "id": "3",
+                "__typename": "Comment",
+                "role": "user",
+                "username": "@jenny_doe",
+                "avatar": "https://randomuser.me/api/portraits/women/68.jpg",
+                "comment": "wow!! 👌👌😍😍",
+                "createdAt": "2022-02-19T14:11:36.943Z"
+              },
+              "Post:2": {
+                "id": "2",
+                "__typename": "Post",
+                "type": "gallery",
+                "image": "https://s3.amazonaws.com/redqteam.com/inst/post/2.jpg",
+                "video": null,
+                "gallery": [
+                  "https://s3.amazonaws.com/redqteam.com/inst/post/2.jpg",
+                  "../s3.amazonaws.com/redqteam.com/inst/post/11.jpg",
+                  "https://s3.amazonaws.com/redqteam.com/inst/post/6.jpg"
+                ],
+                "comments": [
+                  { "__ref": "Comment:1" },
+                  { "__ref": "Comment:2" },
+                  { "__ref": "Comment:3" }
+                ]
+              },
+              "Post:3": {
+                "id": "3",
+                "__typename": "Post",
+                "type": "video",
+                "image": "https://s3.amazonaws.com/redqteam.com/inst/post/9.jpg",
+                "video": "\u003ciframe src=\"https://player.vimeo.com/video/359281775?color=d4d4d4\u0026title=0\u0026byline=0\u0026portrait=0\u0026badge=0\" width=\"640\" height=\"360\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen\u003e\u003c/iframe\u003e",
+                "gallery": null,
+                "comments": [{ "__ref": "Comment:1" }, { "__ref": "Comment:2" }]
+              },
+              "Post:4": {
+                "id": "4",
+                "__typename": "Post",
+                "type": "image",
+                "image": "https://s3.amazonaws.com/redqteam.com/inst/post/3.jpg",
+                "video": null,
+                "gallery": null,
+                "comments": [{ "__ref": "Comment:1" }, { "__ref": "Comment:2" }]
+              },
+              "Post:5": {
+                "id": "5",
+                "__typename": "Post",
+                "type": "image",
+                "image": "https://s3.amazonaws.com/redqteam.com/inst/post/4.jpg",
+                "video": null,
+                "gallery": null,
+                "comments": [
+                  { "__ref": "Comment:1" },
+                  { "__ref": "Comment:2" },
+                  { "__ref": "Comment:3" }
+                ]
+              },
+              "Post:6": {
+                "id": "6",
+                "__typename": "Post",
+                "type": "image",
+                "image": "https://s3.amazonaws.com/redqteam.com/inst/post/5.jpg",
+                "video": null,
+                "gallery": null,
+                "comments": [{ "__ref": "Comment:1" }, { "__ref": "Comment:2" }]
+              },
+              "Post:7": {
+                "id": "7",
+                "__typename": "Post",
+                "type": "gallery",
+                "image": "https://s3.amazonaws.com/redqteam.com/inst/post/7.jpg",
+                "video": null,
+                "gallery": [
+                  "https://s3.amazonaws.com/redqteam.com/inst/post/7.jpg",
+                  "../s3.amazonaws.com/redqteam.com/inst/post/25.jpg",
+                  "https://s3.amazonaws.com/redqteam.com/inst/post/9.jpg"
+                ],
+                "comments": [
+                  { "__ref": "Comment:1" },
+                  { "__ref": "Comment:2" },
+                  { "__ref": "Comment:3" }
+                ]
+              },
+              "Post:8": {
+                "id": "8",
+                "__typename": "Post",
+                "type": "video",
+                "image": "https://s3.amazonaws.com/redqteam.com/inst/post/8.jpg",
+                "video": "\u003ciframe src=\"https://player.vimeo.com/video/35396305?color=d4d4d4\u0026title=0\u0026byline=0\u0026portrait=0\u0026badge=0\" width=\"640\" height=\"360\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen\u003e\u003c/iframe\u003e",
+                "gallery": null,
+                "comments": [{ "__ref": "Comment:1" }, { "__ref": "Comment:2" }]
+              },
+              "Post:9": {
+                "id": "9",
+                "__typename": "Post",
+                "type": "image",
+                "image": "https://s3.amazonaws.com/redqteam.com/inst/post/9.jpg",
+                "video": null,
+                "gallery": null,
+                "comments": [{ "__ref": "Comment:1" }, { "__ref": "Comment:2" }]
+              },
+              "Post:10": {
+                "id": "10",
+                "__typename": "Post",
+                "type": "image",
+                "image": "https://s3.amazonaws.com/redqteam.com/inst/post/10.jpg",
+                "video": null,
+                "gallery": null,
+                "comments": [{ "__ref": "Comment:1" }, { "__ref": "Comment:2" }]
+              },
+              "Post:11": {
+                "id": "11",
+                "__typename": "Post",
+                "type": "gallery",
+                "image": "https://s3.amazonaws.com/redqteam.com/inst/post/11.jpg",
+                "video": null,
+                "gallery": [
+                  "https://s3.amazonaws.com/redqteam.com/inst/post/11.jpg",
+                  "../s3.amazonaws.com/redqteam.com/inst/post/12.jpg",
+                  "https://s3.amazonaws.com/redqteam.com/inst/post/26.jpg"
+                ],
+                "comments": [
+                  { "__ref": "Comment:1" },
+                  { "__ref": "Comment:2" },
+                  { "__ref": "Comment:3" }
+                ]
+              },
+              "Post:12": {
+                "id": "12",
+                "__typename": "Post",
+                "type": "video",
+                "image": "https://s3.amazonaws.com/redqteam.com/inst/post/12.jpg",
+                "video": "\u003ciframe src=\"https://player.vimeo.com/video/359281775?color=d4d4d4\u0026title=0\u0026byline=0\u0026portrait=0\u0026badge=0\" width=\"640\" height=\"360\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen\u003e\u003c/iframe\u003e",
+                "gallery": null,
+                "comments": [{ "__ref": "Comment:1" }, { "__ref": "Comment:2" }]
+              },
+              "Post:13": {
+                "id": "13",
+                "__typename": "Post",
+                "type": "video",
+                "image": "https://s3.amazonaws.com/redqteam.com/inst/post/13.jpg",
+                "video": "\u003ciframe src=\"https://player.vimeo.com/video/35396305?color=d4d4d4\u0026title=0\u0026byline=0\u0026portrait=0\u0026badge=0\" width=\"640\" height=\"360\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen\u003e\u003c/iframe\u003e",
+                "gallery": null,
+                "comments": [{ "__ref": "Comment:1" }, { "__ref": "Comment:2" }]
+              },
+              "Post:14": {
+                "id": "14",
+                "__typename": "Post",
+                "type": "image",
+                "image": "https://s3.amazonaws.com/redqteam.com/inst/post/14.jpg",
+                "video": null,
+                "gallery": null,
+                "comments": [{ "__ref": "Comment:1" }, { "__ref": "Comment:2" }]
+              },
+              "Post:15": {
+                "id": "15",
+                "__typename": "Post",
+                "type": "image",
+                "image": "https://s3.amazonaws.com/redqteam.com/inst/post/15.jpg",
+                "video": null,
+                "gallery": null,
+                "comments": [{ "__ref": "Comment:1" }, { "__ref": "Comment:2" }]
+              },
+              "Post:16": {
+                "id": "16",
+                "__typename": "Post",
+                "type": "video",
+                "image": "https://s3.amazonaws.com/redqteam.com/inst/post/16.jpg",
+                "video": "\u003ciframe src=\"https://player.vimeo.com/video/359281775?color=d4d4d4\u0026title=0\u0026byline=0\u0026portrait=0\u0026badge=0\" width=\"640\" height=\"360\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen\u003e\u003c/iframe\u003e",
+                "gallery": null,
+                "comments": [{ "__ref": "Comment:1" }, { "__ref": "Comment:2" }]
+              },
+              "Post:17": {
+                "id": "17",
+                "__typename": "Post",
+                "type": "image",
+                "image": "https://s3.amazonaws.com/redqteam.com/inst/post/17.jpg",
+                "video": null,
+                "gallery": null,
+                "comments": [{ "__ref": "Comment:1" }, { "__ref": "Comment:2" }]
+              },
+              "Post:18": {
+                "id": "18",
+                "__typename": "Post",
+                "type": "image",
+                "image": "https://s3.amazonaws.com/redqteam.com/inst/post/18.jpg",
+                "video": null,
+                "gallery": null,
+                "comments": [
+                  { "__ref": "Comment:1" },
+                  { "__ref": "Comment:2" },
+                  { "__ref": "Comment:3" }
+                ]
+              },
+              "Post:19": {
+                "id": "19",
+                "__typename": "Post",
+                "type": "image",
+                "image": "https://s3.amazonaws.com/redqteam.com/inst/post/19.jpg",
+                "video": null,
+                "gallery": null,
+                "comments": [{ "__ref": "Comment:1" }, { "__ref": "Comment:2" }]
+              },
+              "Post:20": {
+                "id": "20",
+                "__typename": "Post",
+                "type": "gallery",
+                "image": "https://s3.amazonaws.com/redqteam.com/inst/post/20.jpg",
+                "video": null,
+                "gallery": [
+                  "https://s3.amazonaws.com/redqteam.com/inst/post/7.jpg",
+                  "../s3.amazonaws.com/redqteam.com/inst/post/5.jpg",
+                  "https://s3.amazonaws.com/redqteam.com/inst/post/9.jpg"
+                ],
+                "comments": [
+                  { "__ref": "Comment:1" },
+                  { "__ref": "Comment:2" },
+                  { "__ref": "Comment:3" }
+                ]
+              },
+              "Post:21": {
+                "id": "21",
+                "__typename": "Post",
+                "type": "gallery",
+                "image": "https://s3.amazonaws.com/redqteam.com/inst/post/21.jpg",
+                "video": null,
+                "gallery": [
+                  "https://s3.amazonaws.com/redqteam.com/inst/post/7.jpg",
+                  "../s3.amazonaws.com/redqteam.com/inst/post/5.jpg",
+                  "https://s3.amazonaws.com/redqteam.com/inst/post/9.jpg"
+                ],
+                "comments": [
+                  { "__ref": "Comment:1" },
+                  { "__ref": "Comment:2" },
+                  { "__ref": "Comment:3" }
+                ]
+              },
+              "Post:22": {
+                "id": "22",
+                "__typename": "Post",
+                "type": "video",
+                "image": "https://s3.amazonaws.com/redqteam.com/inst/post/22.jpg",
+                "video": "\u003ciframe src=\"https://player.vimeo.com/video/35396305?color=d4d4d4\u0026title=0\u0026byline=0\u0026portrait=0\u0026badge=0\" width=\"640\" height=\"360\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen\u003e\u003c/iframe\u003e",
+                "gallery": null,
+                "comments": [{ "__ref": "Comment:1" }, { "__ref": "Comment:2" }]
+              },
+              "Post:23": {
+                "id": "23",
+                "__typename": "Post",
+                "type": "image",
+                "image": "https://s3.amazonaws.com/redqteam.com/inst/post/23.jpg",
+                "video": null,
+                "gallery": null,
+                "comments": [{ "__ref": "Comment:1" }, { "__ref": "Comment:2" }]
+              },
+              "Post:24": {
+                "id": "24",
+                "__typename": "Post",
+                "type": "image",
+                "image": "https://s3.amazonaws.com/redqteam.com/inst/post/24.jpg",
+                "video": null,
+                "gallery": null,
+                "comments": [{ "__ref": "Comment:1" }, { "__ref": "Comment:2" }]
+              },
+              "User:1": {
+                "id": "1",
+                "__typename": "User",
+                "avatar": "https://randomuser.me/api/portraits/men/32.jpg",
+                "name": "Leo Gill"
+              },
+              "User:2": {
+                "id": "2",
+                "__typename": "User",
+                "avatar": "https://randomuser.me/api/portraits/women/44.jpg",
+                "name": "June Cha"
+              },
+              "User:3": {
+                "id": "3",
+                "__typename": "User",
+                "avatar": "https://randomuser.me/api/portraits/women/65.jpg",
+                "name": "Renee Sims"
+              },
+              "User:4": {
+                "id": "4",
+                "__typename": "User",
+                "avatar": "https://randomuser.me/api/portraits/men/43.jpg",
+                "name": "Jonathan Cha"
+              },
+              "User:5": {
+                "id": "5",
+                "__typename": "User",
+                "avatar": "https://tinyfac.es/data/avatars/B0298C36-9751-48EF-BE15-80FB9CD11143-500w.jpeg",
+                "name": "Thomas Stock"
+              },
+              "User:6": {
+                "id": "6",
+                "__typename": "User",
+                "avatar": "https://randomuser.me/api/portraits/men/97.jpg",
+                "name": "Veeti Seppanen"
+              },
+              "User:7": {
+                "id": "7",
+                "__typename": "User",
+                "avatar": "https://randomuser.me/api/portraits/women/26.jpg",
+                "name": "Bonnie Riley"
+              },
+              "User:8": {
+                "id": "8",
+                "__typename": "User",
+                "avatar": "https://tinyfac.es/data/avatars/7D3FA6C0-83C8-4834-B432-6C65ED4FD4C3-500w.jpeg",
+                "name": "Steve T. Scaife"
+              },
+              "User:9": {
+                "id": "9",
+                "__typename": "User",
+                "avatar": "https://randomuser.me/api/portraits/men/97.jpg",
+                "name": "Veeti Seppanen"
+              },
+              "User:10": {
+                "id": "10",
+                "__typename": "User",
+                "avatar": "https://randomuser.me/api/portraits/women/26.jpg",
+                "name": "Bonnie Riley"
+              },
+              "User:11": {
+                "id": "11",
+                "__typename": "User",
+                "avatar": "https://tinyfac.es/data/avatars/7D3FA6C0-83C8-4834-B432-6C65ED4FD4C3-500w.jpeg",
+                "name": "Steve T. Scaife"
+              },
+              "User:12": {
+                "id": "12",
+                "__typename": "User",
+                "avatar": "https://randomuser.me/api/portraits/men/32.jpg",
+                "name": "Leo Gill"
+              },
+              "Profile:user_1": {
+                "id": "user_1",
+                "__typename": "Profile",
+                "name": "Lucinda Kerr",
+                "role": "Art \u0026 Social Activist",
+                "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-0.3.5\u0026q=80\u0026fm=jpg\u0026crop=entropy\u0026cs=tinysrgb\u0026w=200\u0026fit=max\u0026s=707b9c33066bf8808c934c8ab394dff6",
+                "posts": [
+                  { "__ref": "Post:1" },
+                  { "__ref": "Post:2" },
+                  { "__ref": "Post:3" },
+                  { "__ref": "Post:4" },
+                  { "__ref": "Post:5" },
+                  { "__ref": "Post:6" },
+                  { "__ref": "Post:7" },
+                  { "__ref": "Post:8" },
+                  { "__ref": "Post:9" },
+                  { "__ref": "Post:10" },
+                  { "__ref": "Post:11" },
+                  { "__ref": "Post:12" },
+                  { "__ref": "Post:13" },
+                  { "__ref": "Post:14" },
+                  { "__ref": "Post:15" },
+                  { "__ref": "Post:16" },
+                  { "__ref": "Post:17" },
+                  { "__ref": "Post:18" },
+                  { "__ref": "Post:19" },
+                  { "__ref": "Post:20" },
+                  { "__ref": "Post:21" },
+                  { "__ref": "Post:22" },
+                  { "__ref": "Post:23" },
+                  { "__ref": "Post:24" }
+                ],
+                "followers": [
+                  { "__ref": "User:1" },
+                  { "__ref": "User:2" },
+                  { "__ref": "User:3" },
+                  { "__ref": "User:4" },
+                  { "__ref": "User:5" },
+                  { "__ref": "User:6" },
+                  { "__ref": "User:7" },
+                  { "__ref": "User:8" },
+                  { "__ref": "User:9" },
+                  { "__ref": "User:10" },
+                  { "__ref": "User:11" },
+                  { "__ref": "User:12" }
+                ],
+                "following": [
+                  { "__ref": "User:1" },
+                  { "__ref": "User:2" },
+                  { "__ref": "User:3" },
+                  { "__ref": "User:4" },
+                  { "__ref": "User:5" },
+                  { "__ref": "User:6" },
+                  { "__ref": "User:7" },
+                  { "__ref": "User:8" }
+                ]
+              },
+              "ROOT_QUERY": {
+                "__typename": "Query",
+                "profile({\"id\":\"user_1\"})": { "__ref": "Profile:user_1" }
+              }
+            }
+          }
+        },
+        "page": "/profile",
+        "query": {},
+        "buildId": "DIKB7D5g-Hd4jM1rQ6PWJ",
+        "runtimeConfig": {},
+        "nextExport": false,
+        "isFallback": false,
+        "gip": true
+      }
+    </script>
+    <script
+      nomodule=""
+      src="_next/static/chunks/polyfills-ec956c52ea1cab5bfe8f.js"
+    ></script>
+    <script
+      src="_next/static/chunks/main-d580e0675eacaca47ea2.js"
+      async=""
+    ></script>
+    <script
+      src="_next/static/chunks/webpack-0926b841a17067fcf2fe.js"
+      async=""
+    ></script>
+    <script
+      src="_next/static/chunks/framework.139b733b3ce774700d58.js"
+      async=""
+    ></script>
+    <script
+      src="_next/static/chunks/a46a52e6967fff46fb1302f7ecf15b86af99b532.cd2df1e720f45ed58e25.js"
+      async=""
+    ></script>
+    <script
+      src="_next/static/chunks/6ae64d9321aa8f00dd99f6ad4e0e8371ddd69307.73cb36e1fa55654f235f.js"
+      async=""
+    ></script>
+    <script
+      src="_next/static/chunks/931481e7340ad0860cfad1f27f5fc2e7848841e4.765e5ec4ab408d37a476.js"
+      async=""
+    ></script>
+    <script
+      src="_next/static/chunks/ad6cc8b26f21beaa770c18c9a2175fbe9a125980.820bd266aacfd25d35e2.js"
+      async=""
+    ></script>
+    <script
+      src="_next/static/chunks/1dd192e4e4992efa77337d3850233e6f381757bc.b07b1168f79877bef82d.js"
+      async=""
+    ></script>
+    <script
+      src="_next/static/chunks/23c11d7c9d18652dad0b7b97b6c984becfdefbba.0f8e7014b6cb85b50268.js"
+      async=""
+    ></script>
+    <script
+      src="_next/static/chunks/ee783512e27598fec937d045b2a925f995cf72eb.4df5d24c000e819493c5.js"
+      async=""
+    ></script>
+    <script
+      src="_next/static/chunks/72741fb2365feb64de57a4807ec7ef22ff89c405.278f382c09a04715bc77.js"
+      async=""
+    ></script>
+    <script
+      src="_next/static/chunks/9520c61cac793198e96f0146b6af9ef340598896.e7844db15e34387acabb.js"
+      async=""
+    ></script>
+    <script
+      src="_next/static/chunks/9a9a9cc83e1172bebe07fa94b6f34ad0a4e918ea.35e01813fc37b3029482.js"
+      async=""
+    ></script>
+    <script
+      src="_next/static/chunks/pages/_app-7ca6f26e059e60c97a0a.js"
+      async=""
+    ></script>
+    <script
+      src="_next/static/chunks/95b64a6e.c5cf105cdc228da190d7.js"
+      async=""
+    ></script>
+    <script
+      src="_next/static/chunks/0761e4fcc3f1bf3cfa460321f5386a3d91a398e9.9587a0538df52a0692df.js"
+      async=""
+    ></script>
+    <script
+      src="_next/static/chunks/5235977e17c0029d5d63105ee46ed28125976ac9.f0c5e1778f839d81d7ee.js"
+      async=""
+    ></script>
+    <script
+      src="_next/static/chunks/621fe44f2179f9cee6b32fac76d57e966d699e26.c2ee1a605eca065638a0.js"
+      async=""
+    ></script>
+    <script
+      src="_next/static/chunks/f5db56c834eb2556b41888c28cad0b3630ffdc13.72e996f048d56fdf5bcf.js"
+      async=""
+    ></script>
+    <script
+      src="_next/static/chunks/pages/profile-cfd42617d4f5937eb2d7.js"
+      async=""
+    ></script>
+    <script
+      src="_next/static/DIKB7D5g-Hd4jM1rQ6PWJ/_buildManifest.js"
+      async=""
+    ></script>
+    <script
+      src="_next/static/DIKB7D5g-Hd4jM1rQ6PWJ/_ssgManifest.js"
+      async=""
+    ></script>
   </body>
 </html>
