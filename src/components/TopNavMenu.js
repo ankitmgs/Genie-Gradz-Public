@@ -1,12 +1,19 @@
-import React from "react";
 import user from "../assets/images/users/user-1.jpg";
-
+import { logout} from "../actions/auth";
 import user4 from "../assets/images/users/user-4.jpg";
-
+import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-const TopNavMenu = () => {
-  return (
-    <div>
+import React, { Component } from 'react';
+
+class TopNavMenu extends Component {
+  handleLogout = () => {
+    localStorage.removeItem("token");
+    this.props.dispatch(logout());
+  };
+  render() {
+    const {auth}=this.props;
+    return (
+      <div>
       {/*  */}
       <ul className="list-unstyled topnav-menu float-end mb-0">
         <li className="d-none d-lg-block">
@@ -17,9 +24,12 @@ const TopNavMenu = () => {
           </form>
         </li>
         <li className="align-self-center my-2">
-          <Link className="btn btn-outline-warning" to="/Login ">
+          {!auth.isLoggedIn&&<Link className="btn btn-outline-warning" to="/login ">
             Login
-          </Link>
+          </Link>}
+          {auth.isLoggedIn&&<span className="btn btn-outline-warning" onClick={this.handleLogout}>
+            Logout
+          </span>}
         </li>
         <li className="dropdown notification-list topbar-dropdown">
           <a
@@ -66,7 +76,7 @@ const TopNavMenu = () => {
             aria-haspopup="false"
             aria-expanded="false"
           >
-            <img src={user} alt="user-image" className="rounded-circle" />
+            <Link to="/profile"><img src={"http://localhost:8000"+auth.user.avatar} alt="user-image" className="rounded-circle" /></Link>
             <span className="pro-user-name ms-1">
               Your Profile <i className="mdi mdi-chevron-down"></i>
             </span>
@@ -125,7 +135,15 @@ const TopNavMenu = () => {
         </li>
       </ul>
     </div>
-  );
-};
+    );
+  }
+}
 
-export default TopNavMenu;
+
+function mapstatetoprops(state) {
+  return {
+    auth: state.auth
+  };
+}
+
+export default connect(mapstatetoprops)(TopNavMenu);

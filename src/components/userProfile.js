@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { Component } from 'react';
 import "../assets/css/userProfile.css";
 import PropTypes from "prop-types";
 import SwipeableViews from "react-swipeable-views";
@@ -16,6 +16,10 @@ import FollowersModal from "./FollowersModal";
 import FollowingModal from "./FollowingModal";
 import { Button } from "@mui/material";
 import CreatePost from "./CreatePost";
+import { connect } from "react-redux";
+import { fetchUser } from "../actions/auth";
+
+
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -50,51 +54,105 @@ function a11yProps(index) {
   };
 }
 
-const UserProfile2 = () => {
-  const theme = useTheme();
-  const [value, setValue] = React.useState(0);
 
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
+
+class userProfile extends Component {
+  constructor(props){
+    super(props);
+    this.state={
+      theme:'',
+      value:0,
+      followersmodelIsOpen:false,
+      followingmodelIsOpen:false,
+      postmodelIsOpen:false
+    }
+  }
+
+  async componentDidMount() {
+    // console.log(this.props.auth.user._id);
+    // await this.props.dispatch(fetchUser(this.props.auth.user._id));
+  }
+
+  
+  
+  handleChange = (event, newValue) => {
+    this.setState({
+      value:newValue
+    })
   };
 
-  const handleChangeIndex = (index) => {
-    setValue(index);
+  handleChangeIndex = (index) => {
+    this.setState({
+      value:index
+    })
   };
+  handlePostModelOpen=()=>{
+    this.setState({
+      postmodelIsOpen:true
+    })
+  }
+  handlePostModelClose=()=>{
+    this.setState({
+      postmodelIsOpen:false
+    })
+  }
+  handleFollowersModelOpen=()=>{
+    this.setState({
+      followersmodelIsOpen:true
+    })
+  }
+  handleFollowersModelClose=()=>{
+    this.setState({
+      followersmodelIsOpen:false
+    })
+  }
+  handleFollowingModelOpen=()=>{
+    this.setState({
+      followingmodelIsOpen:true
+    })
+  }
+  handleFollowingModelClose=()=>{
+    this.setState({
+      followingmodelIsOpen:false
+    })
+  }
 
-  const [followersmodelIsOpen, setFollowersmodelIsOpen] = useState(false);
 
-  const [followingmodelIsOpen, setFollowingModelIsOpen] = useState(false);
-
-  const [postmodelIsOpen, setPostmodelIsOpen] = useState(false);
-
-  return (
-    <div>
+  render() {
+    const user = this.props.auth.user;
+    const posts = this.props.auth.user.posts;
+    
+    if(user.following===undefined){
+      return<div>Loading...</div>
+    }
+    else
+    return (
+      <div>
       <div class="ec ed ee ef eg" style={{ backgroundColor: "white" }}>
         <div class="el em cq af en ag eo ep eq">
           <div class="ae ap aq ar as at au av">
             <div data-baseweb="block" class="er">
               <img
-                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=200&amp;fit=max&amp;s=707b9c33066bf8808c934c8ab394dff6"
+                src={"http://localhost:8000" + user.avatar}
                 alt="Lucinda Kerr"
                 class="es et c9 cp eu ev ew ex"
               />
             </div>
             <div class="af ey ax ez f0 f1 f2 f3 er f4">
               <div data-baseweb="block" class="">
-                <h3 class="bj f5 ds f6 e0 f7 f8">Lucinda Kerr</h3>
+                <h3 class="bj f5 ds f6 e0 f7 f8">{user.username}</h3>
                 <p class="bj bk bl bm be">Art &amp; Social Activist</p>
               </div>
               <Button
                 variant="contained"
-                onClick={() => setPostmodelIsOpen(true)}
+                onClick={this.handlePostModelOpen}
               >
                 Create Post
               </Button>
               <Modal
                 className="mx-auto"
-                isOpen={postmodelIsOpen}
-                onRequestClose={() => setPostmodelIsOpen(false)}
+                isOpen={this.state.postmodelIsOpen}
+                onRequestClose={this.handlePostModelClose}
                 style={{
                   overlay: { zIndex: "1000" },
                   content: {
@@ -115,7 +173,7 @@ const UserProfile2 = () => {
                   },
                 }}
               >
-                <button className="btn btn-primary float-end" onClick={() => setPostmodelIsOpen(false)}>Close</button>
+                <button className="btn btn-primary float-end" onClick={this.handlePostModelClose}>Close</button>
                 <CreatePost />
               </Modal>
               <ul class="profile-menu af f9">
@@ -135,14 +193,16 @@ const UserProfile2 = () => {
                       "system-ui, Helvetica Neue, Helvetica, Arial, sans-serif",
                     fontWeight: "normal",
                   }}
-                  onClick={() => setFollowersmodelIsOpen(true)}
+                  onClick={this.handleFollowersModelOpen}
                 >
-                  Followers <strong class="e0">12</strong>
+                  Followers <strong class="e0">{user.followers.length}</strong>
+                  
+
                 </li>
                 <Modal
                   className="mx-auto"
-                  isOpen={followersmodelIsOpen}
-                  onRequestClose={() => setFollowersmodelIsOpen(false)}
+                  isOpen={this.state.followersmodelIsOpen}
+                  onRequestClose={this.handleFollowersModelClose}
                   style={{
                     overlay: { zIndex: "1000" },
                     content: {
@@ -165,7 +225,7 @@ const UserProfile2 = () => {
                 >
                   <button
                     className="btn btn-primary float-end"
-                    onClick={() => setFollowersmodelIsOpen(false)}
+                    onClick={this.handleFollowersModelClose}
                   >
                     Close
                   </button>
@@ -178,14 +238,16 @@ const UserProfile2 = () => {
                       "system-ui, Helvetica Neue, Helvetica, Arial, sans-serif",
                     fontWeight: "normal",
                   }}
-                  onClick={() => setFollowingModelIsOpen(true)}
+                  onClick={this.handleFollowingModelOpen}
                 >
-                  Following <strong class="e0">8</strong>
+                  Following <strong class="e0">{user.following.length}</strong>
+                 
+
                 </li>
                 <Modal
                   className="mx-auto"
-                  isOpen={followingmodelIsOpen}
-                  onRequestClose={() => setFollowingModelIsOpen(false)}
+                  isOpen={this.state.followingmodelIsOpen}
+                  onRequestClose={this.handleFollowingModelClose}
                   style={{
                     overlay: { zIndex: "1000" },
                     content: {
@@ -208,11 +270,11 @@ const UserProfile2 = () => {
                 >
                   <button
                     className="btn btn-primary float-end"
-                    onClick={() => setFollowingModelIsOpen(false)}
+                    onClick={this.handleFollowingModelClose}
                   >
                     Close
                   </button>
-                  <FollowingModal />
+                  <FollowingModal following={user.following}/>
                 </Modal>
               </ul>
             </div>
@@ -223,8 +285,8 @@ const UserProfile2 = () => {
           <Box sx={{ bgcolor: "background.paper", width: "100%" }}>
             <AppBar position="static">
               <Tabs
-                value={value}
-                onChange={handleChange}
+                value={this.state.value}
+                onChange={this.handleChange}
                 indicatorColor="secondary"
                 textColor="none"
                 variant="fullWidth"
@@ -236,17 +298,17 @@ const UserProfile2 = () => {
               </Tabs>
             </AppBar>
             <SwipeableViews
-              axis={theme.direction === "rtl" ? "x-reverse" : "x"}
-              index={value}
-              onChangeIndex={handleChangeIndex}
+              axis={this.state.theme.direction === "rtl" ? "x-reverse" : "x"}
+              index={this.state.value}
+              onChangeIndex={this.handleChangeIndex}
             >
-              <TabPanel value={value} index={0} dir={theme.direction}>
-                <UserProfileImageTab />
+              <TabPanel value={this.state.value} index={0} dir={this.state.theme.direction}>
+                <UserProfileImageTab posts={posts}/>
               </TabPanel>
-              <TabPanel value={value} index={1} dir={theme.direction}>
+              <TabPanel value={this.state.value} index={1} dir={this.state.theme.direction}>
                 <UserProfileVideoTab />
               </TabPanel>
-              <TabPanel value={value} index={2} dir={theme.direction}>
+              <TabPanel value={this.state.value} index={2} dir={this.state.theme.direction}>
                 Item Three
               </TabPanel>
             </SwipeableViews>
@@ -261,7 +323,14 @@ const UserProfile2 = () => {
         </div>
       </footer>
     </div>
-  );
-};
+    );
+  }
+}
 
-export default UserProfile2;
+function mapstatetoprops(state) {
+  return {
+    auth: state.auth,
+  };
+}
+
+export default connect(mapstatetoprops)(userProfile);
