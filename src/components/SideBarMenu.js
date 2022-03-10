@@ -106,7 +106,7 @@ const SideBarMenu = () => {
 
                       <li>
                         <Link to="/certificates">
-                        <Icon icon="fluent:certificate-24-regular" />
+                          <Icon icon="fluent:certificate-24-regular" />
                           <span> Certificates </span>
                         </Link>
                       </li>
@@ -121,6 +121,12 @@ const SideBarMenu = () => {
                         <Link to="/notes">
                           <i className="mdi mdi-forum-outline"></i>
                           <span> Notes </span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/scheduleclass">
+                          <Icon icon="carbon:event-schedule" />
+                          <span> Schedule Class </span>
                         </Link>
                       </li>
                       <Accordion flush>
