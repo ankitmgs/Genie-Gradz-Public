@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import user from "../assets/images/users/user-1.jpg";
+import user from "../../assets/images/users/user-1.jpg";
 import { Accordion } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { Icon } from "@iconify/react";
 
-const SideBarMenu = () => {
+const TutorSideBar = () => {
   return (
     <div>
       <div className="h-100 menuitem-active" data-simplebar="init">
@@ -47,7 +47,7 @@ const SideBarMenu = () => {
                         data-bs-toggle="dropdown"
                         aria-expanded="false"
                       >
-                        Nowak Helme
+                        Tutor
                       </Link>
                       <div className="dropdown-menu user-pro-dropdown">
                         <Link to="#" className="dropdown-item notify-item">
@@ -72,7 +72,7 @@ const SideBarMenu = () => {
                       </div>
                     </div>
 
-                    <p className="text-muted left-user-info">Student Pannel</p>
+                    <p className="text-muted left-user-info">Tutor Pannel</p>
 
                     <ul className="list-inline">
                       <li className="list-inline-item">
@@ -93,34 +93,34 @@ const SideBarMenu = () => {
                       <li className="menu-title">Navigation</li>
 
                       <li className="menuitem-active">
-                        <Link to="" className="active">
+                        <Link to="/tutor/dashboard" className="active">
                           <i className="mdi mdi-view-dashboard-outline"></i>
                           <span className="badge bg-success rounded-pill float-end">
                             9+
                           </span>
-                          <span> Dashboard </span>
+                          <span>Tutor Dashboard </span>
                         </Link>
                       </li>
 
-                      <li className="menu-title mt-2">Apps</li>
+                      <li className="menu-title mt-2">Tutor Side Pannel</li>
 
                       <li>
-                        <Link to="/certificates">
+                        <Link to="/tutor/Sechedule">
                           <Icon icon="fluent:certificate-24-regular" />
-                          <span> Certificates </span>
+                          <span> Sechedule a class </span>
                         </Link>
                       </li>
                       <li>
-                        <Link to="/calender">
+                        <Link to="/tutor/lecture">
                           <i className="mdi mdi-calendar-blank-outline"></i>
-                          <span> Calendar </span>
+                          <span>Add a recorded lecture </span>
                         </Link>
                       </li>
 
                       <li>
-                        <Link to="/notes">
+                        <Link to="/tutor/notes">
                           <i className="mdi mdi-forum-outline"></i>
-                          <span> Notes </span>
+                          <span> Add Notes and Assignment </span>
                         </Link>
                       </li>
                       <Accordion flush>
@@ -133,20 +133,20 @@ const SideBarMenu = () => {
                               className="mdi mdi-email-outline"
                               style={{ marginRight: "1rem" }}
                             />
-                            Email
+                            Add Project
                           </Accordion.Header>
 
                           <Accordion.Body>
-                            <Link to="/inbox">Inbox</Link>
+                            <Link to="/project">New Project</Link>
                           </Accordion.Body>
                           <Accordion.Body>
-                            <Link to="emailtemplate">Email Template</Link>
+                            <Link to="/project">Update Existing one</Link>
                           </Accordion.Body>
                         </Accordion.Item>
                       </Accordion>
 
                       <Accordion flush>
-                        <Accordion.Item
+                        {/* <Accordion.Item
                           eventKey="0"
                           style={{ backgroundColor: "white" }}
                         >
@@ -523,7 +523,7 @@ const SideBarMenu = () => {
                           </Accordion.Header>
                           <Accordion.Body>Second Level</Accordion.Body>
                           <Accordion.Body>Third Level</Accordion.Body>
-                        </Accordion.Item>
+                        </Accordion.Item> */}
                       </Accordion>
                     </ul>
                   </div>
@@ -569,4 +569,4 @@ const SideBarMenu = () => {
   );
 };
 
-export default SideBarMenu;
+export default TutorSideBar;

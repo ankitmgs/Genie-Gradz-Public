@@ -22,6 +22,8 @@ import ConfirmMail from "./components/ConfirmMail";
 import UserProfile from "./components/userProfile";
 import SideBarMenu from "./components/SideBarMenu";
 import Certificates from "./components/Certificates";
+import TutorNotes from "./components/Tutor_section/TutorNotes";
+import TutorDashboard from "./components/Tutor_section/TutorDashboard";
 import jwtDecode from "jwt-decode";
 import { getAuthTokenFromLocalStorage } from "./helpers/utils";
 import { authenticateUser } from "./actions/auth";
@@ -35,24 +37,28 @@ import {
 
 import React, { Component } from "react";
 
-
-const PrivateRoute=(privateRouteProps)=>{
-  const{isLoggedIn,path,component:Component}=privateRouteProps;
-  return(
-    <Route path={path} render={(props)=>{
-      return isLoggedIn?
-      <Component {...props} />:
-      <Redirect to={{
-        pathname:'/login',
-        state:{ 
-          from:props.location,   //{pathname:'/settings'}
-        },
-      }}/>
-    }}
+const PrivateRoute = (privateRouteProps) => {
+  const { isLoggedIn, path, component: Component } = privateRouteProps;
+  return (
+    <Route
+      path={path}
+      render={(props) => {
+        return isLoggedIn ? (
+          <Component {...props} />
+        ) : (
+          <Redirect
+            to={{
+              pathname: "/login",
+              state: {
+                from: props.location, //{pathname:'/settings'}
+              },
+            }}
+          />
+        );
+      }}
     />
   );
-
-}
+};
 
 class App extends Component {
   componentDidMount() {
@@ -87,6 +93,9 @@ class App extends Component {
             <Route component={LockScreen} path="/lockscreen" />
             <Route component={ConfirmMail} path="/confirmmail" />
             <Route component={Certificates} path="/certificates" />
+            <Route component={TutorDashboard} path="/tutor/dashboard" />
+            <Route component={TutorNotes} path="/tutor/notes" />
+
             <PrivateRoute
               component={UserProfile}
               path="/profile"

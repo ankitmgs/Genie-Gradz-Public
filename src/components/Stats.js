@@ -63,7 +63,7 @@ const statobj = {
     },
   },
 };
-const Stats = () => {
+const Stats = (props) => {
   return (
     <div>
       <div className="card mt-3">
@@ -95,7 +95,7 @@ const Stats = () => {
               </a>
             </div>
           </div>
-          <h4 className="header-title mt-0">Statistics</h4>
+          <h4 className="header-title mt-0">{props.name}</h4>
           <ReactApexChart
             options={statobj.options}
             series={statobj.series}

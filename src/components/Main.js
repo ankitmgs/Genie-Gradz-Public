@@ -22,7 +22,7 @@ import SideBarMenu from "./SideBarMenu";
 import RoyalCollection2 from "./RoyalCollection2";
 import ProjectAcc2 from "./ProjectAcc2";
 
-const SideBar = () => {
+const Main = () => {
   const [showSideBar, setSidebar] = useState(false);
   const handleClick = () => {
     setSidebar(!showSideBar);
@@ -100,40 +100,13 @@ const SideBar = () => {
             {/* mid part of website */}
             <div className="row">
               <div className="col-xl-6">
-                <EnrolledClasses />
+                <EnrolledClasses name="Enrolled Classes" />
               </div>
               <div className="col-xl-6">
                 <Attendence />
               </div>
             </div>
-            {/* profile section */}
-            {/* <div className="row">
-              <div className="col-xl-3 col-md-6">
-                <Profile name="deepank joshi" image={user} role="admin" />
-              </div>
 
-              <div className="col-xl-3 col-md-6">
-                <Profile name="ashutosh" image={user2} role="support lead" />
-              </div>
-
-              <div className="col-xl-3 col-md-6">
-                <Profile name="Stillnotdavid" image={user3} role="designer" />
-              </div>
-
-              <div className="col-xl-3 col-md-6">
-                <Profile name="claranotdavid" image={user4} role="Developer" />
-              </div>
-            </div> */}
-            {/* Last section */}
-
-            {/* <div className="row">
-              <div className="col-xl-6">
-                <RoyalCollection />
-              </div>
-              <div className="col-xl-6">
-                <ProjectAcc />
-              </div>
-            </div> */}
             <div className="row">
               <div className="col-xl-6">
                 <RoyalCollection2 />
@@ -171,4 +144,4 @@ const SideBar = () => {
   );
 };
 
-export default SideBar;
+export default Main;
