@@ -15,7 +15,9 @@ import {
   ADD_POST,
   REMOVE_POST,
   FOLLOW,
-  UNFOLLOW
+  UNFOLLOW,
+  GET_PROJECT_LIST,
+  GET_CLASS_LIST,
 } from "../actions/actionTypes";
 
 const initialAUthState = {
@@ -159,7 +161,18 @@ export default function auth(state = initialAUthState, action) {
       };
       return new_state;
     }
-
+    case GET_PROJECT_LIST: {
+      return {
+        ...state,
+        projects: action.projects,
+      };
+    }
+    case GET_CLASS_LIST: {
+      return {
+        ...state,
+        classes: action.classes,
+      };
+    }
     default:
       return state;
   }

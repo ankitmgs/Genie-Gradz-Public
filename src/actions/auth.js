@@ -14,7 +14,9 @@ import {
   ADD_POST,
   REMOVE_POST,
   FOLLOW,
-  UNFOLLOW
+  UNFOLLOW,
+  GET_PROJECT_LIST,
+  GET_CLASS_LIST,
 } from "./actionTypes";
 import { APIUrls } from "../helpers/urls";
 import getFormBody from "../helpers/utils";
@@ -279,5 +281,74 @@ export function removeFollowing(following) {
   return {
     type: UNFOLLOW,
     following: following,
+  };
+}
+
+export function getProjectList(userId) {
+  return (dispatch) => {
+    const url = APIUrls.projectList(userId);
+    fetch(
+      url,
+      { my: userId },
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+      }
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        if (data.success) {
+          console.log(data);
+          dispatch(storeProjectList(data.data));
+        }
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  };
+}
+
+export function storeProjectList(projectList) {
+  return {
+    type: GET_PROJECT_LIST,
+    projects: projectList,
+  };
+}
+
+export function getClassList(userId) {
+  return (dispatch) => {
+    const url = APIUrls.classList(userId);
+    console.log(url);
+    fetch(
+      url,
+      { my: userId },
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+      }
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        if (data.success) {
+          console.log(data);
+          dispatch(storeClassList(data.data));
+        }
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  };
+}
+
+export function storeClassList(classList) {
+  return {
+    type: GET_CLASS_LIST,
+    classes: classList,
   };
 }
