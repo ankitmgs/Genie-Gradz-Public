@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import user from "../assets/images/users/user-1.jpg";
 import { Accordion } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -50,7 +50,7 @@ const SideBarMenu = () => {
                         Nowak Helme
                       </Link>
                       <div className="dropdown-menu user-pro-dropdown">
-                        <Link to="#" className="dropdown-item notify-item">
+                        <Link to="/profile" className="dropdown-item notify-item">
                           <i className="fe-user me-1"></i>
                           <span>My Account</span>
                         </Link>
@@ -65,7 +65,7 @@ const SideBarMenu = () => {
                           <span>Lock Screen</span>
                         </Link>
 
-                        <Link to="#" className="dropdown-item notify-item">
+                        <Link to="/login" className="dropdown-item notify-item">
                           <i className="fe-log-out me-1"></i>
                           <span>Logout</span>
                         </Link>
