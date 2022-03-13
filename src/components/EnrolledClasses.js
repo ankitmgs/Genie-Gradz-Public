@@ -1,7 +1,7 @@
 import React from "react";
 import Course from "./Classes/Course";
 
-const EnrolledClasses = () => {
+const EnrolledClasses = (props) => {
   return (
     <div>
       <div className="card">
@@ -16,7 +16,7 @@ const EnrolledClasses = () => {
               <i className="mdi mdi-dots-vertical"></i>
             </a>
           </div>
-          <h4 className="header-title mt-0">Enrolled Classes</h4>
+          <h4 className="header-title mt-0">{props.name}</h4>
           <div className="list-group mt-3 enrolled ">
             <Course
               title="Complete Python Course"

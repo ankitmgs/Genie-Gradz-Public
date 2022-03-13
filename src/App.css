@@ -20,8 +20,8 @@ code {
   color: #66a4e0;
 }
 .responsiveSidebar {
-  position: absolute;
-  z-index: 1;
+  position: relative;
+  z-index: 999;
   width: 240px;
 }
 .bars {
@@ -85,3 +85,4 @@ code {
 .assignment:hover {
   color: #e8710a !important;
 }
+/* button animation */
