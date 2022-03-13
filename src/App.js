@@ -34,25 +34,29 @@ import {
 } from "react-router-dom";
 
 import React, { Component } from "react";
-
-
-const PrivateRoute=(privateRouteProps)=>{
-  const{isLoggedIn,path,component:Component}=privateRouteProps;
-  return(
-    <Route path={path} render={(props)=>{
-      return isLoggedIn?
-      <Component {...props} />:
-      <Redirect to={{
-        pathname:'/login',
-        state:{ 
-          from:props.location,   //{pathname:'/settings'}
-        },
-      }}/>
-    }}
+import ScheduleClass from "./components/ScheduleClass";
+const PrivateRoute = (privateRouteProps) => {
+  const { isLoggedIn, path, component: Component } = privateRouteProps;
+  return (
+    <Route
+      path={path}
+      render={(props) => {
+        return isLoggedIn ? (
+          <Component {...props} />
+        ) : (
+          <Redirect
+            to={{
+              pathname: "/login",
+              state: {
+                from: props.location, //{pathname:'/settings'}
+              },
+            }}
+          />
+        );
+      }}
     />
   );
-
-}
+};
 
 class App extends Component {
   componentDidMount() {
@@ -87,6 +91,7 @@ class App extends Component {
             <Route component={LockScreen} path="/lockscreen" />
             <Route component={ConfirmMail} path="/confirmmail" />
             <Route component={Certificates} path="/certificates" />
+            <Route component={ScheduleClass} path="/scheduleclass" />
             <PrivateRoute
               component={UserProfile}
               path="/profile"
