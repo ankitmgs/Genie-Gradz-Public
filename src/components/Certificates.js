@@ -32,7 +32,7 @@ const Certificates = () => {
           </div>
         ) : null}
         {/* end */}
-        <div>
+        <div className="">
           <h2 className="d-flex justify-content-center mt-3">
             Licenses & Certificates
           </h2>

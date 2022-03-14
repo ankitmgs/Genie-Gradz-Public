@@ -20,6 +20,8 @@ code {
   color: #66a4e0;
 }
 .responsiveSidebar {
+  /* position: absolute; */
+  margin-right: 40px;
   position: relative;
   z-index: 999;
   width: 240px;
@@ -44,10 +46,6 @@ code {
   align-items: center;
 }
 .parent-container {
-  /* position: absolute;
-  margin: auto;
-  top: 50%;
-  left: 20%; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -86,3 +84,10 @@ code {
   color: #e8710a !important;
 }
 /* button animation */
+.calendly {
+  height: 800px;
+  width: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
