@@ -36,7 +36,7 @@ import {
 } from "react-router-dom";
 
 import React, { Component } from "react";
-
+import ScheduleClass from "./components/ScheduleClass";
 const PrivateRoute = (privateRouteProps) => {
   const { isLoggedIn, path, component: Component } = privateRouteProps;
   return (
@@ -93,8 +93,9 @@ class App extends Component {
             <Route component={LockScreen} path="/lockscreen" />
             <Route component={ConfirmMail} path="/confirmmail" />
             <Route component={Certificates} path="/certificates" />
-            <Route component={TutorDashboard} path="/tutor/dashboard" />
+            <Route component={ScheduleClass} path="/scheduleclass" />
             <Route component={TutorNotes} path="/tutor/notes" />
+            <Route component={TutorDashboard} path="/tutor/dashboard" />
 
             <PrivateRoute
               component={UserProfile}
