@@ -22,6 +22,8 @@ import ConfirmMail from "./components/ConfirmMail";
 import UserProfile from "./components/userProfile";
 import SideBarMenu from "./components/SideBarMenu";
 import Certificates from "./components/Certificates";
+import TutorNotes from "./components/Tutor_section/TutorNotes";
+import TutorDashboard from "./components/Tutor_section/TutorDashboard";
 import jwtDecode from "jwt-decode";
 import { getAuthTokenFromLocalStorage } from "./helpers/utils";
 import { authenticateUser } from "./actions/auth";
@@ -92,6 +94,9 @@ class App extends Component {
             <Route component={ConfirmMail} path="/confirmmail" />
             <Route component={Certificates} path="/certificates" />
             <Route component={ScheduleClass} path="/scheduleclass" />
+            <Route component={TutorNotes} path="/tutor/notes" />
+            <Route component={TutorDashboard} path="/tutor/dashboard" />
+
             <PrivateRoute
               component={UserProfile}
               path="/profile"
