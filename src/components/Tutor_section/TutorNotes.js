@@ -1,31 +1,16 @@
 import React, { useState } from "react";
 import TutorSideBar from "./TutorSideBar";
 import TutorNoteComponent from "./TutorNoteComponent";
-import axios from "axios";
+
 const Notes = () => {
   const [showSideBar, setSidebar] = useState(true);
-  const [file, setFile] = useState();
 
-  function handleChange(event) {
-    setFile(event.target.files[0]);
-  }
+  const [file, setFile] = useState([]);
 
-  function handleSubmit(event) {
-    event.preventDefault();
-    const url = "http://localhost:3000/uploadFile";
-    const formData = new FormData();
-    console.log(file);
-    formData.append("file", file);
-    formData.append("fileName", file.name);
-    const config = {
-      headers: {
-        "content-type": "multipart/form-data",
-      },
-    };
-    axios.post(url, formData, config).then((response) => {
-      console.log(response.data);
-    });
-  }
+  const handleChange = (e) => {
+    setFile(e.target.files[0]);
+  };
+
   const handleClick = () => {
     setSidebar(!showSideBar);
   };
@@ -80,10 +65,23 @@ const Notes = () => {
           </div>
         </div>
         <div className="text-center">
-          <form onSubmit={handleSubmit}>
-            <input type="file" onChange={handleChange} />
-            <button type="submit">Upload</button>
-          </form>
+          {/* here our note uploaded */}
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <form method="post" action="#" id="#">
+                  <div class="form-group files">
+                    <input
+                      type="file"
+                      onChange={handleChange}
+                      className="form-control"
+                      multiple=""
+                    ></input>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>

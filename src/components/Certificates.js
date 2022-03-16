@@ -27,13 +27,16 @@ const Certificates = () => {
           </li>
         </ul>
         {showSideBar ? (
-          <div className="responsiveSidebar float-start">
+          <div className="responsiveSidebar  float-start">
             <SideBarMenu />
           </div>
         ) : null}
         {/* end */}
-        <div className="">
-          <h2 className="d-flex justify-content-center mt-3">
+        <div className="main">
+          <h2
+            className="d-flex justify-content-center mt-3"
+            style={showSideBar ? { transition: "2s all ease-in-out" } : null}
+          >
             Licenses & Certificates
           </h2>
           {/* <div className="container">
