@@ -120,7 +120,9 @@ const TutorSideBar = () => {
                       <li>
                         <Link to="/tutor/notes">
                           <i className="mdi mdi-forum-outline"></i>
-                          <span> Add Notes and Assignment </span>
+                          <span className="text-center">
+                            Notes and Assignment
+                          </span>
                         </Link>
                       </li>
                       <Accordion flush>

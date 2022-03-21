@@ -9,7 +9,10 @@ const ScheduleClass = () => {
   };
   return (
     <div>
+<<<<<<< HEAD
       
+=======
+>>>>>>> 8e71fc21e56e7b2efd6aba4879548b08099cf152
       <ul className={"list-unstyled topnav-menu topnav-menu-left mb-0"}>
         <li
           style={
@@ -28,6 +31,7 @@ const ScheduleClass = () => {
           <SideBarMenu />
         </div>
       ) : null}
+<<<<<<< HEAD
       {/* end */}
       
       {/* <InlineWidget url="https://calendly.com/guptankit33440/30min"/>
@@ -39,6 +43,11 @@ const ScheduleClass = () => {
         textColor="#ffffff"
         color="#00a2ff"
       />
+=======
+      <div className="calendly">
+        <InlineWidget url="https://calendly.com/guptankit33440/30min" />
+      </div>
+>>>>>>> 8e71fc21e56e7b2efd6aba4879548b08099cf152
     </div>
   );
 };
