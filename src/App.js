@@ -38,6 +38,7 @@ import {
 import React, { Component } from "react";
 import ScheduleClass from "./components/ScheduleClass";
 import ConceptualTest from "./components/ConceptualTest";
+import JitsiComponent from "./components/JitsiComponent";
 const PrivateRoute = (privateRouteProps) => {
   const { isLoggedIn, path, component: Component } = privateRouteProps;
   return (
@@ -98,6 +99,7 @@ class App extends Component {
             <Route component={TutorNotes} path="/tutor/notes" />
             <Route component={TutorDashboard} path="/tutor/dashboard" />
             <Route component={ConceptualTest} path="/conceptual-test" />
+            <Route component={JitsiComponent} path="/jitsi" />
 
             <PrivateRoute
               component={UserProfile}

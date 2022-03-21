@@ -135,6 +135,12 @@ const SideBarMenu = () => {
                           <span> Conceptual Test </span>
                         </Link>
                       </li>
+                      <li>
+                        <Link to="/jitsi">
+                        <Icon icon="fluent:meet-now-16-filled" />
+                          <span> Meeting </span>
+                        </Link>
+                      </li>
                       <Accordion flush>
                         <Accordion.Item
                           eventKey="0"
