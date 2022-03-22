@@ -50,7 +50,10 @@ const SideBarMenu = () => {
                         Nowak Helme
                       </Link>
                       <div className="dropdown-menu user-pro-dropdown">
-                        <Link to="/profile" className="dropdown-item notify-item">
+                        <Link
+                          to="/profile"
+                          className="dropdown-item notify-item"
+                        >
                           <i className="fe-user me-1"></i>
                           <span>My Account</span>
                         </Link>
@@ -103,20 +106,6 @@ const SideBarMenu = () => {
                       </li>
 
                       <li className="menu-title mt-2">Apps</li>
-
-                      <li>
-                        <Link to="/certificates">
-                          <Icon icon="fluent:certificate-24-regular" />
-                          <span> Certificates </span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/calender">
-                          <i className="mdi mdi-calendar-blank-outline"></i>
-                          <span> Calendar </span>
-                        </Link>
-                      </li>
-
                       <li>
                         <Link to="/notes">
                           <i className="mdi mdi-forum-outline"></i>
@@ -129,16 +118,30 @@ const SideBarMenu = () => {
                           <span> Schedule Class </span>
                         </Link>
                       </li>
+
                       <li>
-                        <Link to="/conceptual-test">
-                        <Icon icon="healthicons:i-exam-multiple-choice" />
-                          <span> Conceptual Test </span>
+                        <Link to="/certificates">
+                          <Icon icon="fluent:certificate-24-regular" />
+                          <span> Certificates </span>
+                        </Link>
+                      </li>
+
+                      <li>
+                        <Link to="/jitsi">
+                          <i className="mdi mdi-briefcase-variant-outline"></i>
+                          <span> Meeting </span>
                         </Link>
                       </li>
                       <li>
-                        <Link to="/jitsi">
-                        <Icon icon="fluent:meet-now-16-filled" />
-                          <span> Meeting </span>
+                        <Link to="/calender">
+                          <i className="mdi mdi-calendar-blank-outline"></i>
+                          <span> Calendar </span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/conceptual-test">
+                          <Icon icon="healthicons:i-exam-multiple-choice" />
+                          <span> Conceptual Test </span>
                         </Link>
                       </li>
                       <Accordion flush>
@@ -187,13 +190,6 @@ const SideBarMenu = () => {
                           </Accordion.Body>
                         </Accordion.Item>
                       </Accordion>
-
-                      <li>
-                        <Link to="/project">
-                          <i className="mdi mdi-briefcase-variant-outline"></i>
-                          <span> Projects </span>
-                        </Link>
-                      </li>
 
                       <Accordion flush>
                         <Accordion.Item

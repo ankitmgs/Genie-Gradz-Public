@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import SideBarMenu from "./SideBarMenu";
-
 const ConceptualTest = () => {
   const [showSideBar, setSidebar] = useState(true);
   const handleClick = () => {
@@ -22,12 +21,19 @@ const ConceptualTest = () => {
         </li>
       </ul>
       {showSideBar ? (
-        <div className="responsiveSidebar float-start">
+        <div className="responsiveSidebar  float-start">
           <SideBarMenu />
         </div>
       ) : null}
       {/* end */}
-      <h1>ConceptualTest</h1>
+      <div className="main">
+        <h2
+          className="d-flex justify-content-center mt-3"
+          style={showSideBar ? { transition: "2s all ease-in-out" } : null}
+        >
+          Conceptual Test
+        </h2>
+      </div>
     </div>
   );
 };

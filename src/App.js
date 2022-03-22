@@ -28,6 +28,7 @@ import jwtDecode from "jwt-decode";
 import { getAuthTokenFromLocalStorage } from "./helpers/utils";
 import { authenticateUser } from "./actions/auth";
 import { connect } from "react-redux";
+import ConceptualTest from "./components/ConceptualTest";
 import {
   BrowserRouter as Router,
   Route,
@@ -37,7 +38,6 @@ import {
 
 import React, { Component } from "react";
 import ScheduleClass from "./components/ScheduleClass";
-import ConceptualTest from "./components/ConceptualTest";
 import JitsiComponent from "./components/JitsiComponent";
 const PrivateRoute = (privateRouteProps) => {
   const { isLoggedIn, path, component: Component } = privateRouteProps;
