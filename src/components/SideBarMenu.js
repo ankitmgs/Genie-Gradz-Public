@@ -138,6 +138,12 @@ const SideBarMenu = () => {
                           <span> Calendar </span>
                         </Link>
                       </li>
+                      <li>
+                        <Link to="/conceptual-test">
+                          <Icon icon="healthicons:i-exam-multiple-choice" />
+                          <span> Conceptual Test </span>
+                        </Link>
+                      </li>
 
                       <Accordion flush>
                         <Accordion.Item

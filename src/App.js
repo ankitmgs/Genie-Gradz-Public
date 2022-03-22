@@ -28,6 +28,7 @@ import jwtDecode from "jwt-decode";
 import { getAuthTokenFromLocalStorage } from "./helpers/utils";
 import { authenticateUser } from "./actions/auth";
 import { connect } from "react-redux";
+import ConceptualTest from "./components/ConceptualTest";
 import {
   BrowserRouter as Router,
   Route,
@@ -97,6 +98,7 @@ class App extends Component {
             <Route component={ScheduleClass} path="/scheduleclass" />
             <Route component={TutorNotes} path="/tutor/notes" />
             <Route component={TutorDashboard} path="/tutor/dashboard" />
+            <Route component={ConceptualTest} path="/conceptual-test" />
             <Route component={JitsiComponent} path="/jitsi" />
 
             <PrivateRoute
