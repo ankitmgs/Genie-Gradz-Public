@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { InlineWidget } from "react-calendly";
+import { InlineWidget, PopupWidget } from "react-calendly";
 import SideBarMenu from "./SideBarMenu";
 
 const ScheduleClass = () => {
@@ -27,6 +27,14 @@ const ScheduleClass = () => {
           <SideBarMenu />
         </div>
       ) : null}
+      <PopupWidget
+        url="https://calendly.com/guptankit33440/30min"
+        rootElement={document.getElementById("root")}
+        text="Click here to schedule!"
+        textColor="#ffffff"
+        color="#00a2ff"
+      />
+      =======
       <div className="calendly">
         <InlineWidget url="https://calendly.com/guptankit33440/30min" />
       </div>
