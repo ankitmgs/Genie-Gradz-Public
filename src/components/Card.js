@@ -6,14 +6,14 @@ const Card = (props) => {
       <div className="card">
         <div className="card-body">
           <div className="dropdown float-end">
-            <a
+            {/* <a
               href="#"
               className="dropdown-toggle arrow-none card-drop"
               data-bs-toggle="dropdown"
               aria-expanded="false"
-            >
-              <i className="mdi mdi-dots-vertical"></i>
-            </a>
+            > */}
+            {/* </a> */}
+              <a style={{cursor: "pointer", color: "gray"}} href="#"><i className="mdi mdi-dots-vertical" /></a>
           </div>
 
           <h4 className="header-title mt-0 mb-4">{props.name}</h4>

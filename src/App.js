@@ -22,10 +22,13 @@ import ConfirmMail from "./components/ConfirmMail";
 import UserProfile from "./components/userProfile";
 import SideBarMenu from "./components/SideBarMenu";
 import Certificates from "./components/Certificates";
+import TutorNotes from "./components/Tutor_section/TutorNotes";
+import TutorDashboard from "./components/Tutor_section/TutorDashboard";
 import jwtDecode from "jwt-decode";
 import { getAuthTokenFromLocalStorage } from "./helpers/utils";
 import { authenticateUser } from "./actions/auth";
 import { connect } from "react-redux";
+import ConceptualTest from "./components/ConceptualTest";
 import {
   BrowserRouter as Router,
   Route,
@@ -33,8 +36,10 @@ import {
   Redirect,
 } from "react-router-dom";
 
+import Test from './pages/Test';
 import React, { Component } from "react";
 import ScheduleClass from "./components/ScheduleClass";
+import JitsiComponent from "./components/JitsiComponent";
 const PrivateRoute = (privateRouteProps) => {
   const { isLoggedIn, path, component: Component } = privateRouteProps;
   return (
@@ -92,6 +97,13 @@ class App extends Component {
             <Route component={ConfirmMail} path="/confirmmail" />
             <Route component={Certificates} path="/certificates" />
             <Route component={ScheduleClass} path="/scheduleclass" />
+            <Route component={TutorNotes} path="/tutor/notes" />
+            <Route component={TutorDashboard} path="/tutor/dashboard" />
+            {/* <Route component={ConceptualTest} path="/conceptual-test" /> */}
+            <Route component={JitsiComponent} path="/jitsi" />
+            <Route component={Test} path="/conceptual-test" />
+
+
             <PrivateRoute
               component={UserProfile}
               path="/profile"

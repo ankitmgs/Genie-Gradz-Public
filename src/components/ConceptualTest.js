@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import { InlineWidget, PopupWidget } from "react-calendly";
 import SideBarMenu from "./SideBarMenu";
-
-const ScheduleClass = () => {
+const ConceptualTest = () => {
   const [showSideBar, setSidebar] = useState(true);
   const handleClick = () => {
     setSidebar(!showSideBar);
@@ -23,22 +21,21 @@ const ScheduleClass = () => {
         </li>
       </ul>
       {showSideBar ? (
-        <div className="responsiveSidebar float-start">
+        <div className="responsiveSidebar  float-start">
           <SideBarMenu />
         </div>
       ) : null}
-      <PopupWidget
-        url="https://calendly.com/guptankit33440/30min"
-        rootElement={document.getElementById("root")}
-        text="Click here to schedule!"
-        textColor="#ffffff"
-        color="#00a2ff"
-      />
-      {/* <div className="calendly">
-        <InlineWidget url="https://calendly.com/guptankit33440/30min" />
-      </div> */}
+      {/* end */}
+      <div className="main">
+        <h2
+          className="d-flex justify-content-center mt-3"
+          style={showSideBar ? { transition: "2s all ease-in-out" } : null}
+        >
+          Conceptual Test
+        </h2>
+      </div>
     </div>
   );
 };
 
-export default ScheduleClass;
+export default ConceptualTest;

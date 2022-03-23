@@ -1,28 +1,19 @@
 import React, { useState } from "react";
-import "../assets/css/appDark.css";
-import "../assets/css/app.css";
-import user from "../assets/images/users/user-1.jpg";
-import user2 from "../assets/images/users/user-2.jpg";
-import user3 from "../assets/images/users/user-3.jpg";
-import user4 from "../assets/images/users/user-4.jpg";
-// import user5 from "../assets/images/users/user-5.jpg";
-// import user10 from "../assets/images/users/user-10.jpg";
-// import { Accordion } from "react-bootstrap";
-import Card from "./Card";
-import Attendence from "./Attendence";
-import Stats from "./Stats";
-import EnrolledClasses from "./EnrolledClasses";
-import Profile from "./Profile";
-import RoyalCollection from "./RoyalCollection";
-import ProjectAcc from "./ProjectAcc";
-import TopNavMenu from "./TopNavMenu";
-import LogoBox from "./LogoBox";
-import Navcomponent from "./Navcomponent";
-import SideBarMenu from "./SideBarMenu";
-import RoyalCollection2 from "./RoyalCollection2";
-import ProjectAcc2 from "./ProjectAcc2";
+import "../../assets/css/appDark.css";
+import "../../assets/css/app.css";
+import Card from "../Card";
 
-const Main = () => {
+import Stats from "../Stats";
+import EnrolledClasses from "../EnrolledClasses";
+import TopNavMenu from "../TopNavMenu";
+import LogoBox from "../LogoBox";
+
+import TutorSideBar from "../Tutor_section/TutorSideBar";
+import RoyalCollection2 from "../RoyalCollection2";
+import ProjectAcc2 from "../ProjectAcc2";
+import Student from "./Student";
+
+const TutorDashboard = () => {
   const [showSideBar, setSidebar] = useState(false);
   const handleClick = () => {
     setSidebar(!showSideBar);
@@ -45,18 +36,18 @@ const Main = () => {
           </li>
 
           <li>
-            <h4 className="page-title-main">Dashboard</h4>
+            <h4 className="page-title-main">Tutor Dashboard</h4>
           </li>
         </ul>
 
         {showSideBar ? (
           <div className="responsiveSidebar">
-            <SideBarMenu />
+            <TutorSideBar />
           </div>
         ) : null}
       </div>
       <div className="left-side-menu">
-        <SideBarMenu />
+        <TutorSideBar />
       </div>
       {/* main content */}
       <div className="content-page">
@@ -65,7 +56,7 @@ const Main = () => {
             <div className="row">
               <div className="col-xl-3 col-md-6">
                 <Card
-                  name="Platform Activity"
+                  name="Classes Scheduled"
                   number="2231"
                   icon="envelope"
                   iconColor="#3AA76D"
@@ -73,7 +64,7 @@ const Main = () => {
               </div>
               <div className="col-xl-3 col-md-6">
                 <Card
-                  name="Goals"
+                  name="Hours Spend"
                   number="8451"
                   icon="wallet"
                   iconColor=" #FF0080"
@@ -81,7 +72,7 @@ const Main = () => {
               </div>
               <div className="col-xl-3 col-md-6">
                 <Card
-                  name="Number of Problem Solved"
+                  name="Assignment Given"
                   number="231"
                   icon="cart-shopping"
                   iconColor="#0070F3"
@@ -90,7 +81,7 @@ const Main = () => {
 
               <div className="col-xl-3 col-md-6">
                 <Card
-                  name="NGR (network growth rate)"
+                  name="Notes Given"
                   number="158"
                   icon="envelope"
                   iconColor="rgba(121, 40, 202, 0.85)"
@@ -100,24 +91,24 @@ const Main = () => {
             {/* mid part of website */}
             <div className="row">
               <div className="col-xl-6">
-                <EnrolledClasses name="Enrolled Classes" />
+                <EnrolledClasses name="Classes student can enrolled" />
               </div>
               <div className="col-xl-6">
-                <Attendence />
+                <Student />
               </div>
             </div>
 
-            <div className="row">
+            {/* <div className="row">
               <div className="col-xl-6">
                 <RoyalCollection2 />
               </div>
               <div className="col-xl-6">
                 <ProjectAcc2 />
               </div>
-            </div>
+            </div> */}
             <div className="row">
               <div className="col-xl-12">
-                <Stats />
+                <Stats name="Performance" />
               </div>
             </div>
           </div>
@@ -144,4 +135,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default TutorDashboard;

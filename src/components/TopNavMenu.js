@@ -76,9 +76,9 @@ class TopNavMenu extends Component {
             aria-haspopup="false"
             aria-expanded="false"
           >
-            <Link to="/profile"><img src={"http://localhost:8000"+auth.user.avatar} alt="user-image" className="rounded-circle" /></Link>
+            <img src={"http://localhost:8000"+auth.user.avatar} alt="" className="rounded-circle" />
             <span className="pro-user-name ms-1">
-              Your Profile <i className="mdi mdi-chevron-down"></i>
+              Your Profile
             </span>
           </Link>
           {/* <div className="dropdown-menu dropdown-menu-end profile-dropdown ">

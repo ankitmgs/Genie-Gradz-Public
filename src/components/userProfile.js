@@ -64,13 +64,14 @@ class userProfile extends Component {
       value:0,
       followersmodelIsOpen:false,
       followingmodelIsOpen:false,
-      postmodelIsOpen:false
+      postmodelIsOpen:false,
+      updated:false
     }
   }
 
   async componentDidMount() {
     // console.log(this.props.auth.user._id);
-    // await this.props.dispatch(fetchUser(this.props.auth.user._id));
+    await this.props.dispatch(fetchUser(this.props.auth.user._id));
   }
 
   
@@ -121,6 +122,12 @@ class userProfile extends Component {
   render() {
     const user = this.props.auth.user;
     const posts = this.props.auth.user.posts;
+    if(this.props.auth.user._id&&this.state.updated===false){
+      this.props.dispatch(fetchUser(this.props.auth.user._id));
+      this.setState({
+        updated:true
+      })
+    }
     
     if(user.following===undefined){
       return<div>Loading...</div>
@@ -174,7 +181,7 @@ class userProfile extends Component {
                 }}
               >
                 <button className="btn btn-primary float-end" onClick={this.handlePostModelClose}>Close</button>
-                <CreatePost />
+                <CreatePost user={user} dispatch={this.props.dispatch}/>
               </Modal>
               <ul class="profile-menu af f9">
                 <li
@@ -184,7 +191,7 @@ class userProfile extends Component {
                       "system-ui, Helvetica Neue, Helvetica, Arial, sans-serif",
                   }}
                 >
-                  Posts <strong class="e0">24</strong>
+                  Posts <strong class="e0">{user.posts.length}</strong>
                 </li>
                 <li
                   class="b7 fa fb b0 be bj bk bl bm bi fc bd bx"

@@ -4,15 +4,25 @@ import {createPost} from "../actions/auth";
 import React, { Component } from 'react';
 
 class CreatePost extends Component {
+  constructor(props){
+    super(props);
+    this.state={
+      postMessage:'post'
+    }
+  }
   handlePost = (e) => {
     e.preventDefault();
+    console.log(e.currentTarget);
     const formData = new FormData(e.currentTarget);
     const payload = new FormData();
     payload.append("avatar", formData.get("avatar"));
     payload.append("content", formData.get("content"));
     payload.append("userId", this.props.user._id);
     this.props.dispatch(createPost(payload));
-    this.handleClosePost();
+   
+    this.setState({
+      postMessage:'posted'
+    })
   };
   render() {
     return (
@@ -51,8 +61,8 @@ class CreatePost extends Component {
           />
         </div>
         <div style={{ textAlign: "center" }}>
-          <button type="submit" variant="contained" className="w-100">
-            Post
+          <button type="submit" variant="contained" className="w-100 post-button">
+            {this.state.postMessage}
           </button>
         </div>
       </form>

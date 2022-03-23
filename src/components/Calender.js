@@ -21,13 +21,12 @@ const Calender = () => {
             </button>
           </li>
         </ul>
-
         {showSideBar ? (
           <div className="responsiveSidebar float-start">
             <SideBarMenu />
           </div>
-        ) :  null}
-        {/* end */} <h2>Licenses & Certificates</h2>
+        ) : null}
+        {/* end */} <h2>Calender for slot booking</h2>
       </div>
     </>
   );
