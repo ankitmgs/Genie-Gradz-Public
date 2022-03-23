@@ -19,7 +19,7 @@ const Certificates = () => {
               showSideBar ? { backgroundColor: "black", width: "240px " } : null
             }
           >
-            <button className="bars disable-btn " onClick={handleClick}>
+            <button onClick={handleClick} className="bars disable-btn ">
               <span style={{ fontSize: "10px", color: "Dodgerblue" }}>
                 <i class="fa-solid fa-bars fa-2x"></i>
               </span>

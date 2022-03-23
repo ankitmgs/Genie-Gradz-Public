@@ -165,3 +165,11 @@ button {
   color: white;
   padding: 5px 30px;
 }
+/* end */
+.notes-item {
+  background-color: white !important;
+}
+.notes {
+  border: 2px solid gray;
+  border-radius: 10px;
+}
