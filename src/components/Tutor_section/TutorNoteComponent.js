@@ -7,21 +7,25 @@ const TutorNoteComponent = (props) => {
   };
   return (
     <>
-      <div class="accordion   mb-4" id="myAccordion ">
-        <div class="accordion-item ">
-          <h2 class="accordion-header" id={`heading${props.id}`}>
+      <div className="accordion  mb-4" id="myAccordion ">
+        <div
+          className="accordion-item  notes "
+          style={{ borderRadius: "10px" }}
+        >
+          <h2 className="accordion-header" id={`heading${props.id}`}>
             <button
+              style={{ borderRadius: "10px" }}
               type="button"
-              class="accordion-button collapsed note "
+              className="accordion-button collapsed note "
               data-bs-toggle="collapse"
               data-bs-target={`#collapse${props.id}`}
             >
-              <i class="fa-solid fa-circle-user fa-3x px-2"></i>
+              <i className="fa-solid fa-circle-user fa-3x px-2"></i>
               <p>
                 <b>{props.author} </b>just posted notes on java zero to hero
                 course
-                <p class="card-text">
-                  <small class="text-muted">Last updated 3 mins ago</small>
+                <p className="card-text">
+                  <small className="text-muted">Last updated 3 mins ago</small>
                 </p>
               </p>
             </button>
