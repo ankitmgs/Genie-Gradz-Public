@@ -34,10 +34,9 @@ const ScheduleClass = () => {
         textColor="#ffffff"
         color="#00a2ff"
       />
-      =======
-      <div className="calendly">
+      {/* <div className="calendly">
         <InlineWidget url="https://calendly.com/guptankit33440/30min" />
-      </div>
+      </div> */}
     </div>
   );
 };

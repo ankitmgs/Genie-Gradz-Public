@@ -75,7 +75,7 @@ const Stats = (props) => {
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              <i className="mdi mdi-dots-vertical"></i>
+              {/* <i className="mdi mdi-dots-vertical"></i> */}
             </a>
             <div className="dropdown-menu dropdown-menu-end">
               <a href="#" className="dropdown-item">

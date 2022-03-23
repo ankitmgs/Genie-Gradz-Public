@@ -15,12 +15,14 @@ class JitsiComponent extends Component {
       isVideoMuted: true,
     };
   }
+  
+  
 
   startMeet = () => {
     const options = {
       roomName: this.state.room,
       width: "100%",
-      height: 650,
+      height: 716,
       configOverwrite: { prejoinPageEnabled: false },
       interfaceConfigOverwrite: {
         // overwrite interface properties
