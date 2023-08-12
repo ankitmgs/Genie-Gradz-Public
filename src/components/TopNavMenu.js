@@ -76,7 +76,7 @@ class TopNavMenu extends Component {
             aria-haspopup="false"
             aria-expanded="false"
           >
-            <img src={"http://localhost:8000"+auth.user.avatar} alt="" className="rounded-circle" />
+            <img src={"http://localhost:8000"+auth.user.avatar} className="rounded-circle" />
             <span className="pro-user-name ms-1">
               Your Profile
             </span>
